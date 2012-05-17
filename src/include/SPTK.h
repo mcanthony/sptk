@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /***********************************************************
-   $Id: SPTK.h,v 1.37 2011/12/19 06:00:35 mataki Exp $ 
+   $Id: SPTK.h,v 1.38 2012/05/17 06:42:27 mataki Exp $ 
    
    Speech Signal Processing Toolkit
    SPTK.h
@@ -127,6 +127,7 @@ char *getmem(const size_t leng, const size_t size);
 double gexp(const double r, const double x);
 double glog(const double r, const double x);
 int ifftr(double *x, double *y, const int l);
+double invert(double **mat, double **inv, const int n);
 void multim(double x[], const int xx, const int xy, double y[], const int yx,
             const int yy, double a[]);
 void addm(double x[], double y[], const int xx, const int yy, double a[]);
