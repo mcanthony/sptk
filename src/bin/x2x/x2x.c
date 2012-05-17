@@ -76,7 +76,7 @@
 *                                                                        *
 *************************************************************************/
 
-static char *rcs_id = "$Id: x2x.c,v 1.37 2011/07/28 09:22:58 mataki Exp $";
+static char *rcs_id = "$Id: x2x.c,v 1.38 2012/05/17 09:52:52 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -485,7 +485,7 @@ int main(int argc, char **argv)
             case 'v':
             case 'd':
             case 'f':
-               printf(form, x);
+               printf(form, (float) x);
                break;
             case 'U':
                printf(form, (unsigned long long) x);
