@@ -62,7 +62,7 @@
 *                                                                          *
 ****************************************************************************/
 
-static char *rcs_id = "$Id: pcas.c,v 1.4 2012/05/17 02:59:18 mataki Exp $";
+static char *rcs_id = "$Id: pcas.c,v 1.5 2012/05/17 05:02:31 mataki Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -139,7 +139,7 @@ double **malloc_matrix(int row, int col)
 int main(int argc, char *argv[])
 {
    FILE *fp = stdin, *fpca = NULL;
-   int i, j, n = -1;
+   int i, j;
    int leng = LENG, total, order = PCA_ORDER;
    int eigen_num;
    double *mean = NULL;

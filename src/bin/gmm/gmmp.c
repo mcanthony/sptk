@@ -62,7 +62,7 @@
  *                                                                       *
  ************************************************************************/
 
-static char *rcs_id = "$Id: gmmp.c,v 1.6 2012/05/17 02:59:17 mataki Exp $";
+static char *rcs_id = "$Id: gmmp.c,v 1.7 2012/05/17 05:02:30 mataki Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -136,7 +136,7 @@ int main(int argc, char **argv)
    FILE *fp = stdin, *fgmm = NULL;
    GMM gmm;
    double logp, ave_logp, *x;
-   int m, t, M = DEF_M, L = DEF_L, T;
+   int m, M = DEF_M, L = DEF_L, T;
    Boolean aflag = DEF_A;
 
    if ((cmnd = strrchr(argv[0], '/')) == NULL)
