@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _mfcc.c,v 1.5 2012/05/17 06:22:48 mataki Exp $
+    $Id: _mfcc.c,v 1.6 2012/06/03 03:46:10 mataki Exp $
 
     Mel-Frequency Cepstral Analysis
 
@@ -483,7 +483,7 @@ void mfcc(double *in, double *mc, const double sampleFreq, const double alpha,
    pre_emph(x, px, alpha, wlng);
    /* apply hamming window */
    if (usehamming)
-      hamming(px, wlng);
+      window(HAMMING, px, sizeof(*px), wlng);
    for (k = 0; k < wlng; k++)
       wx[k] = px[k];
    spec(wx, sp, flng);
