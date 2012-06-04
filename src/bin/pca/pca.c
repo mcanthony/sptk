@@ -83,7 +83,7 @@
 *                                                                                *
 *********************************************************************************/
 
-static char *rcs_id = "$Id: pca.c,v 1.15 2011/12/12 12:51:28 mataki Exp $";
+static char *rcs_id = "$Id: pca.c,v 1.16 2012/06/04 18:36:07 okdtmhr Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -161,7 +161,7 @@ double **malloc_matrix(int n)
 {
    double **m;
    double *mtmp;
-   int i, j;
+   int i;
 
    mtmp = dgetmem(n * n);
    if ((m = (double **) malloc(sizeof(double *) * n)) == NULL) {
