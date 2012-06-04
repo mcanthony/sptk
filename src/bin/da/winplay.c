@@ -44,6 +44,8 @@
 
 /************************************************************************
 *                                                                       *
+*    $Id: winplay.c,v 1.7 2012/06/04 18:17:07 okdtmhr Exp $";            *
+*                                                                       *
 *    Simple APIs for playing audio data in windows                      *
 *                                                                       *
 *                                            2007.10  Jong-Jin Kim      *
@@ -51,8 +53,6 @@
 *    notice: just for PCM, MONO                                         *
 *                                                                       *
 *************************************************************************/
-
-static char *rcs_id = "$Id: winplay.c,v 1.6 2011/04/27 13:46:38 mataki Exp $";
 
 #ifdef WIN32
 
