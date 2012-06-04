@@ -74,7 +74,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: lspcheck.c,v 1.27 2011/12/20 15:27:29 uratec Exp $";
+static char *rcs_id = "$Id: lspcheck.c,v 1.28 2012/06/04 22:51:18 okdtmhr Exp $";
 
 
 /*  Standard C Libraries  */
@@ -158,7 +158,8 @@ int main(int argc, char **argv)
    Boolean arrange = ARRANGE, gain = GAIN;
    FILE *fp = stdin;
    double *lsp, *lsp1, alpha = ALPHA, sampling = SAMPLING;
-
+   void lsparrange(double *lsp, const int ord, double alpha, int itype,
+                   double sampling);
 
    if ((cmnd = strrchr(argv[0], '/')) == NULL)
       cmnd = argv[0];
