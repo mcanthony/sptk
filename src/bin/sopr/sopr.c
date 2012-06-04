@@ -95,7 +95,7 @@
 *                                                                              *
 *******************************************************************************/
 
-static char *rcs_id = "$Id: sopr.c,v 1.34 2011/12/19 06:00:35 mataki Exp $";
+static char *rcs_id = "$Id: sopr.c,v 1.35 2012/06/04 22:54:51 okdtmhr Exp $";
 
 
 /*  Standard C Libraries  */
@@ -217,9 +217,9 @@ static double mem[MEMSIZE];
 
 int main(int argc, char *argv[])
 {
-   int i, count = 0, magic_count = 0, MAGIC_COUNT = 0;
+   int magic_count = 0, MAGIC_COUNT = 0;
    FILE *fp;
-   char *s, *m, c;
+   char *s, c;
    char *infile = NULL;
    int sopr(FILE *);
 

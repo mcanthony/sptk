@@ -73,7 +73,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: swab.c,v 1.23 2011/04/27 13:46:43 mataki Exp $";
+static char *rcs_id = "$Id: swab.c,v 1.24 2012/06/04 22:56:06 okdtmhr Exp $";
 
 
 /*  Standard C Libraries  */
@@ -165,7 +165,6 @@ int main(int argc, char *argv[])
    int c;
    size_t iosize = sizeof(short);
    void conv(FILE * fp, size_t iosize);
-   Boolean int3flg = SIGNED_INT3, uint3flg = UNSIGNED_INT3;
 
    if ((cmnd = strrchr(argv[0], '/')) == NULL)
       cmnd = argv[0];
