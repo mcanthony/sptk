@@ -62,7 +62,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: fft.c,v 1.24 2011/04/27 13:46:39 mataki Exp $";
+static char *rcs_id = "$Id: fft.c,v 1.25 2012/06/04 23:25:06 okdtmhr Exp $";
 
 /* Standard C Libraries */
 #include <stdio.h>
@@ -125,9 +125,9 @@ int main(int argc, char *argv[])
 {
    FILE *fp;
    char *s, *infile = NULL, c;
-   int size = SIZE, nd = -1, out = ' ';
-   int dft(FILE * fp, const int size, const int nd, const int out);
-
+   int size = SIZE, size2, k, nd = -1, out = ' ';
+   double *x, *y;
+ 
    if ((cmnd = strrchr(argv[0], '/')) == NULL)
       cmnd = argv[0];
    else
@@ -173,21 +173,13 @@ int main(int argc, char *argv[])
               cmnd, nd, size);
       return (1);
    }
-   if (infile) {
-      fp = getfp(infile, "rb");
-      dft(fp, size, nd, out);
-      fclose(fp);
-   } else
-      dft(stdin, size, nd, out);
-
-   return 0;
-}
-
-int dft(FILE * fp, const int size, const int nd, const int out)
-{
-   double *x, *y;
-   int k, size2;
-
+   
+        fp = stdin;
+   
+      if (infile) {
+        fp = getfp(infile, "rb");
+      }
+       
    x = dgetmem(size2 = size + size);
    y = x + size;
 
@@ -210,5 +202,10 @@ int dft(FILE * fp, const int size, const int nd, const int out)
          fwritef(y, sizeof(*y), size, stdout);
    }
 
-   return (0);
+      if (infile){
+        fclose(fp);
+      }
+
+      return (0);
 }
+
