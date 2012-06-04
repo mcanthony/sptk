@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _gmm.c,v 1.9 2011/04/27 13:46:40 mataki Exp $
+    $Id: _gmm.c,v 1.10 2012/06/04 17:49:32 okdtmhr Exp $
 
     GMM output prob calculation functions
 
@@ -61,6 +61,8 @@
 #endif
 
 #include "gmm.h"
+
+int choleski(double **cov, double **S, const int L);
 
 double cal_det(double **var, const int D)
 {
@@ -97,7 +99,6 @@ double cal_gconst(double *var, const int D)
 
 double cal_gconstf(double **var, const int D)
 {
-   int d;
    double gconst, tmp;
 
    tmp = cal_det(var, D);
