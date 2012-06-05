@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _smcep.c,v 1.20 2012/06/05 09:25:15 okdtmhr Exp $
+    $Id: _smcep.c,v 1.21 2012/06/05 09:39:19 okdtmhr Exp $
 
     Mel-Cepstral Analysis (2nd order all-pass filter)
 
@@ -642,7 +642,7 @@ int smcep(double *xw, const int flng, double *mc, const int m, const int fftsz,
       }
       break;
    default:
-      fprintf(stderr, "mgcep : Input type %d is not supported!\n", itype);
+      fprintf(stderr, "smcep : Input type %d is not supported!\n", itype);
       exit(1);
    }
    if (itype > 0) {
