@@ -81,7 +81,7 @@
 *                                                                        *
 *************************************************************************/
 
-static char *rcs_id = "$Id: mfcc.c,v 1.4 2011/12/08 08:43:03 mataki Exp $";
+static char *rcs_id = "$Id: mfcc.c,v 1.5 2012/06/06 22:49:04 okdtmhr Exp $";
 
 
 /*  Standard C Libraries  */
@@ -273,6 +273,7 @@ int main(int argc, char **argv)
    mc = x + l;
 
    while (freadf(x, sizeof(*x), l, fp) == l) {
+      
       mfcc(x, mc, fs, alpha, eps, l, L, m + 1, n, lift, dftmode, usehamming);
       if (!czero)
          mc[m] = mc[m + 1];
