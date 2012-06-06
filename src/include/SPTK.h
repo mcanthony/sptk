@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /***********************************************************
-   $Id: SPTK.h,v 1.39 2012/06/05 09:05:15 okdtmhr Exp $ 
+   $Id: SPTK.h,v 1.40 2012/06/06 23:04:38 okdtmhr Exp $ 
    
    Speech Signal Processing Toolkit
    SPTK.h
@@ -158,6 +158,10 @@ void ic2ir(double *h, const int leng, double *c, const int nc);
 void c2sp(double *c, const int m, double *x, double *y, const int l);
 void clip(double *x, const int l, const double min, const double max,
           double *y);
+int dct_create_table_fft(const int nSize);
+int dct_create_table(const int nSize);
+int dct_based_on_fft(float *pReal, float *pImag, const float *pInReal, const float *pInImag);
+int dct_based_on_dft(float *pReal, float *pImag, const float *pInReal, const float *pInImag);
 double df2(const double x, const double sf, const double f0p, const double wbp,
            const double f0z, const double wbz, const int fp, const int fz,
            double *buf, int *bufp);
