@@ -1,14 +1,13 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.6 2012/06/06 12:10:24 mataki Exp $
+## $Id: Makefile.am,v 1.7 2012/06/08 07:34:24 mataki Exp $
 INCLUDES = -I$(top_srcdir)/include
 bin_PROGRAMS = us
 bin_SCRIPTS = us16.sh uscd.sh
 us_SOURCES = us.c 
 us_LDADD = $(top_builddir)/lib/libSPTK.a
 
-#lpcoefdir = $(DESTDIR)$(libdir)
-lpcoefdir = $(datarootdir)
+lpcoefdir = $(DESTDIR)$(libdir)
 us_CPPFLAGS = -DLIB=\"$(lpcoefdir)\"
 
 dist_lpcoef_DATA = lpfcoef.2to3f \
