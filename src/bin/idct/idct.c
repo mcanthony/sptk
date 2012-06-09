@@ -61,7 +61,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: idct.c,v 1.4 2012/06/06 22:32:03 okdtmhr Exp $";
+static char *rcs_id = "$Id: idct.c,v 1.5 2012/06/09 09:54:57 okdtmhr Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -134,35 +134,6 @@ int usage(void)
 #endif
    fprintf(stderr, "\n");
    exit(1);
-}
-
-static int dft(double *pReal, double *pImag, const int nDFTLength)
-{
-   int k, n;
-   double *pTempReal, *pTempImag, TempReal, TempImag;
-
-   pTempReal = dgetmem(nDFTLength);
-   pTempImag = dgetmem(nDFTLength);
-
-   memcpy(pTempReal, pReal, sizeof(double) * nDFTLength);
-   memcpy(pTempImag, pImag, sizeof(double) * nDFTLength);
-
-   for (k = 0; k < nDFTLength; k++) {
-      TempReal = 0;
-      TempImag = 0;
-      for (n = 0; n < nDFTLength; n++) {
-         TempReal += pTempReal[n] * cos(2.0 * PI * n * k / (double) nDFTLength)
-             + pTempImag[n] * sin(2.0 * PI * n * k / (double) nDFTLength);
-         TempImag += -pTempReal[n] * sin(2.0 * PI * n * k / (double) nDFTLength)
-             + pTempImag[n] * cos(2.0 * PI * n * k / (double) nDFTLength);
-      }
-      pReal[k] = TempReal;
-      pImag[k] = TempImag;
-   }
-   free(pTempReal);
-   free(pTempImag);
-
-   return (0);
 }
 
 int idct_create_table(const int nSize)
