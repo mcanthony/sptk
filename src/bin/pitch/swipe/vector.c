@@ -67,7 +67,7 @@
 
 /****************************************************************
 
-    $Id: vector.c,v 1.3 2012/05/17 06:10:00 mataki Exp $
+    $Id: vector.c,v 1.4 2012/06/09 09:50:41 okdtmhr Exp $
 
 *****************************************************************/
 
@@ -81,6 +81,14 @@
 
 #ifndef NAN
     #define NAN     sqrt(-1.)
+#endif
+
+// polynomial fitting
+#if 0
+#else
+static void  LU(int, double **);
+static void  SOLVE(int, double **, double *);
+static void  dgels(int, vector, vector);
 #endif
 
 // create a vector of size xSz
