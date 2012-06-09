@@ -65,7 +65,7 @@
 *               -j j     :  maximum iteration               [30]        *
 *               -d d     :  end condition                   [0.001]     *
 *               -e e     :  small value added to periodgram [0]         *
-*               -E E     :  floor in db calculated per frame[FALSE]     *
+*               -E E     :  floor in db calculated per frame[N/A]       *
 *       infile:                                                         *
 *               data sequence                                           *
 *                       , x(0), x(1), ..., x(L-1),                      *
@@ -80,7 +80,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: uels.c,v 1.25 2012/06/05 09:35:01 okdtmhr Exp $";
+static char *rcs_id = "$Id: uels.c,v 1.26 2012/06/09 09:48:40 okdtmhr Exp $";
 
 
 /*  Standard C Libraries  */
@@ -146,7 +146,7 @@ void usage(int status)
            END);
    fprintf(stderr, "       -e e  : small value added to periodgram  [%g]\n",
            EPS);
-   fprintf(stderr, "       -E E  : floor in db calculated per frame [FALSE]\n");  
+   fprintf(stderr, "       -E E  : floor in db calculated per frame [N/A]\n");  
    fprintf(stderr, "       -h    : print this message\n");
    fprintf(stderr, "  infile:\n");
    fprintf(stderr, "       windowed sequence (%s)                [stdin]\n",

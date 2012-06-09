@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _gcep.c,v 1.17 2012/06/05 09:30:17 okdtmhr Exp $
+    $Id: _gcep.c,v 1.18 2012/06/09 09:48:29 okdtmhr Exp $
 
     Generalized Cepstral Analysis
 
@@ -58,7 +58,7 @@
         int       itr1  : minimum number of iteration
         int       itr2  : maximum number of iteration
         double    d     : end condition
-        int       etype :    0 -> don't use "e"
+        int       etype :    0 -> e is not used
                              1 -> e is initial value for log-periodgram
                              2 -> e is floor periodgram in db
         double    e     : initial value for log-periodgram

@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _mcep.c,v 1.25 2012/06/05 08:42:16 okdtmhr Exp $
+    $Id: _mcep.c,v 1.26 2012/06/09 09:47:49 okdtmhr Exp $
 
     Mel-Cepstral Analysis
 
@@ -58,7 +58,7 @@
         int      itr1  : minimum number of iteration
         int      itr2  : maximum number of iteration
         double   dd    : end condition
-        int      etype :    0 -> don't use "e"
+        int      etype :    0 -> e is not used
                             1 -> e is initial value for log-periodgram
                             2 -> e is floor periodgram in db
         double   e     : initial value for log-periodgram

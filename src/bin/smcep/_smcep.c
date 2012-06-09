@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _smcep.c,v 1.21 2012/06/05 09:39:19 okdtmhr Exp $
+    $Id: _smcep.c,v 1.22 2012/06/09 09:48:17 okdtmhr Exp $
 
     Mel-Cepstral Analysis (2nd order all-pass filter)
 
@@ -60,7 +60,7 @@
         int      itr1  : minimum number of iteration
         int      itr2  : maximum number of iteration
         double   dd    : end condition
-        int      etype :    0 -> don't use "e"
+        int      etype :    0 -> e is not used
                             1 -> e is initial value for log-periodgram
                             2 -> e is floor periodgram in db
         double   e     : initial value for log-periodgram

@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _uels.c,v 1.22 2012/06/05 09:35:01 okdtmhr Exp $
+    $Id: _uels.c,v 1.23 2012/06/09 09:48:40 okdtmhr Exp $
 
     Unbiased Estimation of Log Spectrum
 
@@ -57,7 +57,7 @@
         int      itr1  : minimum number of iteration
         int      itr2  : maximum number of iteration
         double   dd    : end condition
-        int      etype :    0 -> don't use "e"
+        int      etype :    0 -> e is not used
                             1 -> e is initial value for log-periodgram
                             2 -> e is floor periodgram in db
         double   e     : initial value for log-periodgram
