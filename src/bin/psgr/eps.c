@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /********************************************************
-* $Id: eps.c,v 1.16 2011/12/07 09:22:11 mataki Exp $   *
+* $Id: eps.c,v 1.17 2012/06/11 09:29:41 okdtmhr Exp $   *
 *            Setup Commands for EPSF                    *
 ********************************************************/
 
@@ -163,7 +163,7 @@ static void bbox(FILE * fp, int *xmin, int *ymin, int *xmax, int *ymax,
    char c;
    int n, x, y;
    int temp_xmin, temp_ymin, temp_xmax, temp_ymax;
-   int temp_plot_xmin, temp_plot_ymin, temp_plot_xmax, temp_plot_ymax;
+   int temp_plot_xmin, temp_plot_ymin = 0, temp_plot_xmax, temp_plot_ymax;
    int plot_xmin, plot_ymin, plot_xmax, plot_ymax;
    double unit_length;
    int rotate = 0;
