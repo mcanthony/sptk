@@ -76,7 +76,7 @@
 *                                                                        *
 *************************************************************************/
 
-static char *rcs_id = "$Id: x2x.c,v 1.39 2012/06/05 11:37:27 mataki Exp $";
+static char *rcs_id = "$Id: x2x.c,v 1.40 2012/06/26 02:16:41 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -110,7 +110,7 @@ static char *rcs_id = "$Id: x2x.c,v 1.39 2012/06/05 11:37:27 mataki Exp $";
 #define FORM_ULONG  "%u"
 #define FORM_LLONG  "%lld"
 #define FORM_ULLONG "%llu"
-#define FORM_FLOAT  "%f"
+#define FORM_FLOAT  "%g"
 #define FORM_LDBL   "%Lg"
 #define INT3_MAX   8388607
 #define INT3_MIN   (-8388608)
