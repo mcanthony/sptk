@@ -1,8 +1,8 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.4 2012/06/06 12:10:14 mataki Exp $
+## $Id: Makefile.am,v 1.5 2012/07/02 11:36:52 mataki Exp $
 INCLUDES = -I$(top_srcdir)/include
-lpcoefdir = $(DESTDIR)$(libdir)
+lpcoefdir = $(datarootdir)/SPTK
 
 bin_PROGRAMS = ds
 ds_SOURCES = ds.c 

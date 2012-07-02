@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.6 2012/06/06 12:10:13 mataki Exp $
+## $Id: Makefile.am,v 1.7 2012/07/02 11:36:51 mataki Exp $
 if USEDA
 INCLUDES = -I$(top_srcdir)/include
 bin_PROGRAMS = dawrite
@@ -13,7 +13,7 @@ EXTRA_DIST = da.in
 CLEANFILES = $(bin_PROGRAMS) $(bin_SCRIPTS)
 
 replace_path  = sed -e 's,@binpath@,$(DESTDIR)$(bindir),g' \
-	       -e 's,@libpath@,$(DESTDIR)$(libdir),g' \
+	       -e 's,@libpath@,$(datarootdir)/SPTK,g' \
 	       -e 's,@sptk_version@,$(PACKAGE_VERSION),g' \
 	       -e 's,@cshpath@,$(CSH),' \
 	       -e 's,@io_symbol@,$(IO_SYMBOL),g' \
