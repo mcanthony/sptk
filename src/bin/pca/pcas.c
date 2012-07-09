@@ -62,7 +62,7 @@
 *                                                                          *
 ****************************************************************************/
 
-static char *rcs_id = "$Id: pcas.c,v 1.6 2012/05/17 06:16:32 mataki Exp $";
+static char *rcs_id = "$Id: pcas.c,v 1.7 2012/07/09 12:13:26 mataki Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -98,7 +98,7 @@ void usage(int status)
    fprintf(stderr, "  usage:\n");
    fprintf(stderr, "       %s [ options ] pcafile [ infile ] > stdout\n", cmnd);
    fprintf(stderr, "  options:\n");
-   fprintf(stderr, "       -l L  : dimentinality of vectors         [%d]\n",
+   fprintf(stderr, "       -l L  : dimensionality of vectors        [%d]\n",
            LENG);
    fprintf(stderr, "       -n N  : order of principal component     [%d]\n",
            PCA_ORDER);
