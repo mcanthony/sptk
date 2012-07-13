@@ -53,7 +53,7 @@
 
 set path    = ( @binpath@ $path )
 set sptkver = '@sptk_version@'
-set cvsid   = '$Id: mgclsp2mgc.in,v 1.1 2011/11/29 10:08:07 sawada11 Exp $'
+set cvsid   = '$Id: mgclsp2mgc.in,v 1.2 2012/07/13 08:37:46 okdtmhr Exp $'
 
 set cmnd = $0
 set cmnd = $cmnd:t
@@ -96,6 +96,10 @@ while ($i < $#argv)
 	case -s:
 		@ i++
 		set s = $argv[$i]
+		breaksw
+	case -h:
+                set exit_status = 0
+		goto usage
 		breaksw
         default:
                 set file = $argv[$i]
