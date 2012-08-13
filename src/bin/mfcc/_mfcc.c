@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _mfcc.c,v 1.9 2012/06/07 07:01:43 okdtmhr Exp $
+    $Id: _mfcc.c,v 1.10 2012/08/13 08:21:42 mataki Exp $
 
     Mel-Frequency Cepstral Analysis
 
@@ -242,7 +242,7 @@ void mfcc(double *in, double *mc, const double sampleFreq, const double alpha,
    for (k = 1; k <= n; k++)
       c0 += fb[k];
    c0 *= sqrt(2.0 / (double) n);
-   dct(fb+1, dc, n, m, dftmode, 0);
+   dct(fb + 1, dc, n, m, dftmode, 0);
 
    /* liftering */
    if (ceplift > 0)

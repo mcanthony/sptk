@@ -95,7 +95,7 @@
 *                                                                              *
 *******************************************************************************/
 
-static char *rcs_id = "$Id: sopr.c,v 1.36 2012/07/13 08:36:53 okdtmhr Exp $";
+static char *rcs_id = "$Id: sopr.c,v 1.37 2012/08/13 08:21:43 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -235,7 +235,7 @@ int main(int argc, char *argv[])
          c = *++s;
          if (islower(c) && *++s == '\0') {
             s = *++argv;
-            if ((s == NULL) && (c != 'h' )) {
+            if ((s == NULL) && (c != 'h')) {
                fprintf(stderr,
                        "%s : numerical argument is also needed !\n", cmnd);
                usage(1);

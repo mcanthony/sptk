@@ -61,7 +61,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: idct.c,v 1.5 2012/06/09 09:54:57 okdtmhr Exp $";
+static char *rcs_id = "$Id: idct.c,v 1.6 2012/08/13 08:21:42 mataki Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -176,7 +176,7 @@ int idct_create_table(const int nSize)
       pWeightReal[0] *= sqrt(2.0);
       pWeightImag[0] *= sqrt(2.0);
    }
-  
+
    return (0);
 }
 

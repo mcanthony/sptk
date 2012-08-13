@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _gmm.c,v 1.11 2012/06/27 10:16:31 mataki Exp $
+    $Id: _gmm.c,v 1.12 2012/08/13 08:21:42 mataki Exp $
 
     GMM output prob calculation functions
 
@@ -82,14 +82,14 @@ double cal_det(double **var, const int D)
          ldet += log(tri[l][l]);
 
       for (l = 0; l < D; l++) {
-          free(tri[l]);
+         free(tri[l]);
       }
       free(tri);
 
       return (2.0 * ldet);
    } else {
       for (l = 0; l < D; l++) {
-          free(tri[l]);
+         free(tri[l]);
       }
       free(tri);
 

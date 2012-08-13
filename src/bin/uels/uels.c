@@ -80,7 +80,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: uels.c,v 1.26 2012/06/09 09:48:40 okdtmhr Exp $";
+static char *rcs_id = "$Id: uels.c,v 1.27 2012/08/13 08:21:43 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -146,7 +146,7 @@ void usage(int status)
            END);
    fprintf(stderr, "       -e e  : small value added to periodgram  [%g]\n",
            EPS);
-   fprintf(stderr, "       -E E  : floor in db calculated per frame [N/A]\n");  
+   fprintf(stderr, "       -E E  : floor in db calculated per frame [N/A]\n");
    fprintf(stderr, "       -h    : print this message\n");
    fprintf(stderr, "  infile:\n");
    fprintf(stderr, "       windowed sequence (%s)                [stdin]\n",
@@ -168,7 +168,7 @@ void usage(int status)
 int main(int argc, char **argv)
 {
    int m = ORDER, flng = FLENG, ilng = FLENG, itype = ITYPE,
-     etype = ETYPE, itr1 = MINITR, itr2 = MAXITR, flag = 0;
+       etype = ETYPE, itr1 = MINITR, itr2 = MAXITR, flag = 0;
    FILE *fp = stdin;
    double *c, *x, end = END, e = EPS;
 
@@ -211,8 +211,8 @@ int main(int argc, char **argv)
          case 'E':
             etype = 2;
             e = atof(*++argv);
-            --argc;          
-             break;
+            --argc;
+            break;
          case 'h':
             usage(0);
          default:
@@ -231,9 +231,9 @@ int main(int argc, char **argv)
    c = x + flng;
 
    while (freadf(x, sizeof(*x), ilng, fp) == ilng) {
-    
+
       flag = uels(x, flng, c, m, itr1, itr2, end, etype, e, itype);
-    
+
       fwritef(c, sizeof(*c), m + 1, stdout);
    }
 

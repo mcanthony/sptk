@@ -62,7 +62,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: fft.c,v 1.25 2012/06/04 23:25:06 okdtmhr Exp $";
+static char *rcs_id = "$Id: fft.c,v 1.26 2012/08/13 08:21:42 mataki Exp $";
 
 /* Standard C Libraries */
 #include <stdio.h>
@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
    char *s, *infile = NULL, c;
    int size = SIZE, size2, k, nd = -1, out = ' ';
    double *x, *y;
- 
+
    if ((cmnd = strrchr(argv[0], '/')) == NULL)
       cmnd = argv[0];
    else
@@ -173,13 +173,13 @@ int main(int argc, char *argv[])
               cmnd, nd, size);
       return (1);
    }
-   
-        fp = stdin;
-   
-      if (infile) {
-        fp = getfp(infile, "rb");
-      }
-       
+
+   fp = stdin;
+
+   if (infile) {
+      fp = getfp(infile, "rb");
+   }
+
    x = dgetmem(size2 = size + size);
    y = x + size;
 
@@ -202,10 +202,9 @@ int main(int argc, char *argv[])
          fwritef(y, sizeof(*y), size, stdout);
    }
 
-      if (infile){
-        fclose(fp);
-      }
+   if (infile) {
+      fclose(fp);
+   }
 
-      return (0);
+   return (0);
 }
-

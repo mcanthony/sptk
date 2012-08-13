@@ -86,7 +86,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: vstat.c,v 1.27 2012/06/04 23:00:25 okdtmhr Exp $";
+static char *rcs_id = "$Id: vstat.c,v 1.28 2012/08/13 08:21:43 mataki Exp $";
 
 
 /*  Standard C Libralies  */
@@ -147,7 +147,8 @@ void usage(int status)
    fprintf(stderr, "                  2 covariance\n");
    fprintf(stderr, "                  3 mean and upper / lower bound of\n");
    fprintf(stderr, "                    confidence interval via t-dist.\n");
-   fprintf(stderr, "       -c c   : conf. level of conf. interval (%%)   [%g]\n",
+   fprintf(stderr,
+           "       -c c   : conf. level of conf. interval (%%)   [%g]\n",
            CONFLEV);
    fprintf(stderr, "       -d     : diagonal covariance                 [%s]\n",
            BOOL[DIAGC]);

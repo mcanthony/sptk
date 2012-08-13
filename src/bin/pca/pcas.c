@@ -62,7 +62,7 @@
 *                                                                          *
 ****************************************************************************/
 
-static char *rcs_id = "$Id: pcas.c,v 1.7 2012/07/09 12:13:26 mataki Exp $";
+static char *rcs_id = "$Id: pcas.c,v 1.8 2012/08/13 08:21:42 mataki Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -211,19 +211,19 @@ int main(int argc, char *argv[])
    test_data = dgetmem(leng);
    z = dgetmem(order);
    while (freadf(test_data, sizeof(*test_data), leng, fp) == leng) {
-       fillz(z, order, sizeof(double));
+      fillz(z, order, sizeof(double));
 
-       /* calculate pricipal component score */
-       for (i = 0; i < order; i++) {
-           for (j = 0; j < leng; j++) {
-               z[i] += e_vec[i][j] * (test_data[j] - mean[j]);
-           }
-       }
+      /* calculate pricipal component score */
+      for (i = 0; i < order; i++) {
+         for (j = 0; j < leng; j++) {
+            z[i] += e_vec[i][j] * (test_data[j] - mean[j]);
+         }
+      }
 
-       /* output principal component score */
-       fwritef(z, sizeof(*z), order, stdout);
+      /* output principal component score */
+      fwritef(z, sizeof(*z), order, stdout);
 
-       total++;
+      total++;
    }
    if (total == 0) {
       fprintf(stderr, "%s: No input data !\n", cmnd);

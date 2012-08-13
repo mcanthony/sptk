@@ -78,7 +78,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: pitch.c,v 1.41 2012/06/11 09:29:18 okdtmhr Exp $";
+static char *rcs_id = "$Id: pitch.c,v 1.42 2012/08/13 08:21:43 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -184,7 +184,7 @@ int main(int argc, char **argv)
    char *cGet_f0(float_list * flist, float sample_freq,
                  int length, int frame_shift,
                  int minF0, int maxF0, int fnum, int otype);
-   void swipe(float_list *input, int length, double min, double max,
+   void swipe(float_list * input, int length, double min, double max,
               double st, int frame_shift, double samplerate, int otype);
 
    if ((cmnd = strrchr(argv[0], '/')) == NULL)

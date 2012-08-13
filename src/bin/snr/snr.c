@@ -66,7 +66,7 @@
 *               SNR,  SNRseg                                            *
 ************************************************************************/
 
-static char *rcs_id = "$Id: snr.c,v 1.25 2012/06/04 22:53:10 okdtmhr Exp $";
+static char *rcs_id = "$Id: snr.c,v 1.26 2012/08/13 08:21:43 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -139,8 +139,7 @@ void usage(int status)
 
 int main(int argc, char **argv)
 {
-   int l = LENG, otype =
-       OTYPE, count, countold, countseg, xn, yn, size, i;
+   int l = LENG, otype = OTYPE, count, countold, countseg, xn, yn, size, i;
    FILE *fp2 = stdin, *fp1 = NULL;
    double *x, *y, snr, snrseg, pw1, pw2, pw1snr, pw2snr, sub;
    char *s, c;

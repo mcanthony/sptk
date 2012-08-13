@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /*
- * $Id: gcdata.h,v 1.11 2012/06/04 23:46:26 okdtmhr Exp $
+ * $Id: gcdata.h,v 1.12 2012/08/13 08:21:43 mataki Exp $
  *   Hedder for setup plotting parts
  */
 
@@ -77,4 +77,3 @@ static char *f_name[] = {
    "-adobe-symbol-medium-r-normal-*-*-140-*-*-p-*-adobe-fontspecific",
    "-adobe-symbol-medium-r-normal-*-*-160-*-*-p-*-adobe-fontspecific"
 };
-
