@@ -66,7 +66,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: dmp.c,v 1.23 2011/04/27 13:46:39 mataki Exp $";
+static char *rcs_id = "$Id: dmp.c,v 1.24 2012/08/18 06:19:18 okdtmhr Exp $";
 
 
 /*  Standard C Libraries  */
@@ -110,27 +110,27 @@ void usage(int status)
    fprintf(stderr, "       -l l  : block length  (1,...,l)      [EOD]\n");
    fprintf(stderr, "       +type : data type                    [f]\n");
    fprintf(stderr,
-           "                c  (char, %dbyte)         C  (unsigned char, %dbyte)\n",
-           sizeof(char), sizeof(unsigned char));
+           "                c  (char, %ldbyte)         C  (unsigned char, %ldbyte)\n",
+           (unsigned long)sizeof(char), (unsigned long)sizeof(unsigned char));
    fprintf(stderr,
-           "                s  (short, %dbyte)        S  (unsigned short, %dbyte)\n",
-           sizeof(short), sizeof(unsigned short));
+           "                s  (short, %ldbyte)        S  (unsigned short, %ldbyte)\n",
+           (unsigned long)sizeof(short), (unsigned long)sizeof(unsigned short));
    fprintf(stderr,
            "                i3 (int, 3byte)          I3 (unsigned int, 3byte)\n");
    fprintf(stderr,
-           "                i  (int, %dbyte)          I  (unsigned int, %dbyte)\n",
-           sizeof(int), sizeof(unsigned int));
+           "                i  (int, %ldbyte)          I  (unsigned int, %ldbyte)\n",
+           (unsigned long)sizeof(int), (unsigned long)sizeof(unsigned int));
    fprintf(stderr,
-           "                l  (long, %dbyte)         L  (unsigned long, %dbyte)\n",
-           sizeof(long), sizeof(unsigned long));
+           "                l  (long, %ldbyte)         L  (unsigned long, %ldbyte)\n",
+           (unsigned long)sizeof(long), (unsigned long)sizeof(unsigned long));
    fprintf(stderr,
-           "                le (long long, %dbyte)    LE (unsigned long long, %dbyte)\n",
-           sizeof(long long), sizeof(unsigned long long));
+           "                le (long long, %ldbyte)    LE (unsigned long long, %ldbyte)\n",
+           (unsigned long)sizeof(long long), (unsigned long)sizeof(unsigned long long));
    fprintf(stderr,
-           "                f  (float, %dbyte)        d  (double, %dbyte)\n",
-           sizeof(float), sizeof(double));
+           "                f  (float, %ldbyte)        d  (double, %ldbyte)\n",
+           (unsigned long)sizeof(float), (unsigned long)sizeof(double));
    fprintf(stderr,
-           "                de (long double, %dbyte)\n", sizeof(long double));
+           "                de (long double, %ldbyte)\n", (unsigned long)sizeof(long double));
    fprintf(stderr, "       %%form : print format(printf style)   [N/A]\n");
    fprintf(stderr, "       -h    : print this message\n");
    fprintf(stderr, "  infile:\n");
