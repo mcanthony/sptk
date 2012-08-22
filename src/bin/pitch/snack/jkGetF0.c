@@ -60,7 +60,7 @@
 
 /****************************************************************
 
-    $Id: jkGetF0.c,v 1.8 2012/05/17 06:10:00 mataki Exp $
+    $Id: jkGetF0.c,v 1.9 2012/08/22 11:14:26 mataki Exp $
 
 *****************************************************************/
 
@@ -1844,7 +1844,8 @@ cGet_f0(Sound *sound, Tcl_Interp *interp, float **outlist, int *length)
 {
 #else
 void cGet_f0(float_list *input, float sample_freq, int length,
-             int frame_shift, int minF0, int maxF0, int fnum, int otype)
+             int frame_shift, int minF0, int maxF0, int fnum, int otype,
+             float voice_bias)
 {
 #endif
   float *fdata;
@@ -1940,6 +1941,11 @@ void cGet_f0(float_list *input, float sample_freq, int length,
   par->mean_f0 = 200;          /* unused */
   par->mean_f0_weight = 0.0f;  /* unused */
   par->conditioning = 0;       /* unused */
+#if 1
+  if (voice_bias > 0.0) {
+     par->voice_bias  = voice_bias;
+  }
+#endif
 
 #if 0
   if (startpos < 0) startpos = 0;
