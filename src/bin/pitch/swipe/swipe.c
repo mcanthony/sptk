@@ -67,7 +67,7 @@
 
 /****************************************************************
 
-    $Id: swipe.c,v 1.4 2012/06/09 09:50:41 okdtmhr Exp $
+    $Id: swipe.c,v 1.5 2012/08/22 16:18:55 uratec Exp $
 
 *****************************************************************/
 
@@ -472,7 +472,7 @@ vector pitch(matrix S, vector pc, double st) {
 #if 0
 vector swipe(int fid, double min, double max, double st, double dt) {
 #else
-  void swipe(float_list *input, int length, double min, double max, double st, int frame_shift, double samplerate, int otype) {
+  void swipe(float_list *input, int length, double samplerate, int frame_shift, double min, double max, double st, int otype) {
 #endif
     int i; 
     double td = 0.;
