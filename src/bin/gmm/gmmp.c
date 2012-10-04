@@ -62,7 +62,7 @@
  *                                                                       *
  ************************************************************************/
 
-static char *rcs_id = "$Id: gmmp.c,v 1.8 2012/10/04 09:15:19 mataki Exp $";
+static char *rcs_id = "$Id: gmmp.c,v 1.9 2012/10/04 09:46:30 mataki Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -212,8 +212,13 @@ int main(int argc, char **argv)
    fclose(fp);
 
    if (aflag) {
-      ave_logp /= (double) T;
-      fwritef(&ave_logp, sizeof(double), 1, stdout);
+      if (T == 0) {
+         fprintf(stderr, "%s: No input data!\n", cmnd);
+         usage(1);
+      } else {
+         ave_logp /= (double) T;
+         fwritef(&ave_logp, sizeof(double), 1, stdout);
+      }
    }
 
    return (0);
