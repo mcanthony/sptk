@@ -75,7 +75,7 @@
 *                                                                          *
 ***************************************************************************/
 
-static char *rcs_id = "$Id: dtw.c,v 1.6 2012/09/13 05:47:38 mataki Exp $";
+static char *rcs_id = "$Id: dtw.c,v 1.7 2012/11/09 09:22:35 mataki Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -1011,7 +1011,7 @@ void recursive_calc_type_5(DTW_Table * table)
 void recursive_calc_type_6(DTW_Table * table)
 {
    int i, j, Tx = table->data[0].total, Ty = table->data[1].total;
-   double local = 0.0, min = 0.0, path1, path2, path3;;
+   double local = 0.0, min = 0.0, path1, path2, path3;
    DTW_Cell **cell = table->cell;
    WEIGHT weight = table->weight;
 
