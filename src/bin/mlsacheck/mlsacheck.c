@@ -66,7 +66,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: mlsacheck.c,v 1.4 2012/12/08 06:12:19 mataki Exp $";
+static char *rcs_id = "$Id: mlsacheck.c,v 1.5 2012/12/14 11:16:34 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -234,11 +234,7 @@ void mlsacheck(double *mcep, int m, int fftlen, int frame,
 
    /* output ascii report */
    if (ascii_report == TR) {
-      fprintf(stderr, "[ unstable frame number : %d ]\n", frame);
-      for (i = 0; i < m + 1; i++) {
-         fprintf(stderr, "%f\n", mcep[i]);
-      }
-      fprintf(stderr, "\n");
+      fprintf(stderr, "[No. %d] is unstable frame\n", frame);
    }
 }
 
