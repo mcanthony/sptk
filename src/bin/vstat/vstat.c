@@ -88,7 +88,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: vstat.c,v 1.29 2012/11/11 17:26:38 okdtmhr Exp $";
+static char *rcs_id = "$Id: vstat.c,v 1.30 2012/12/15 20:16:49 okdtmhr Exp $";
 
 
 /*  Standard C Libralies  */
@@ -429,6 +429,11 @@ int main(int argc, char *argv[])
          count = count / nv;
          k = nv;
          rewind(fp);
+      }
+
+      if (k % 2 == 0) {
+         fprintf(stderr, "%s : warning: the number of vectors is even!\n",
+                 cmnd);
       }
 
       mtmp = (double **) getmem(leng, sizeof(*mtmp));
