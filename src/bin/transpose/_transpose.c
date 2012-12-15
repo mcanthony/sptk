@@ -44,14 +44,14 @@
 
 /************************************************************************
 
-  $Id: _transpose.c,v 1.1 2012/09/09 08:50:54 okdtmhr Exp $
+  $Id: _transpose.c,v 1.2 2012/12/15 22:36:49 okdtmhr Exp $
 
   Transpose a matrix
       transpose(float* buf, int m, int n)
 
       float* buf : data seqence (Overwrite)
-      int      m : number of row
-      int      n : number of column      
+      int      m : number of rows
+      int      n : number of columns
 
 ************************************************************************/
 
