@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _lspcheck.c,v 1.14 2012/12/15 01:56:08 mataki Exp $
+    $Id: _lspcheck.c,v 1.15 2012/12/17 05:21:25 mataki Exp $
 
     Check order of LSP
 
@@ -87,7 +87,7 @@ int lspcheck(double *lsp, const int ord)
 
 /****************************************************************
 
-    $Id: _lspcheck.c,v 1.14 2012/12/15 01:56:08 mataki Exp $
+    $Id: _lspcheck.c,v 1.15 2012/12/17 05:21:25 mataki Exp $
 
     Rearrangement of LSP
 
@@ -96,11 +96,10 @@ int lspcheck(double *lsp, const int ord)
        double    *lsp : LSP
        int        ord : order of LSP
        double     min : minimal distance between two consecutive LSPs
-       int   sampling : sampling frequency
 
 *****************************************************************/
 
-void lsparrange(double *lsp, int ord, double min, double sampling)
+void lsparrange(double *lsp, int ord, double min)
 {
    int i, count, flag;
    double tmp;

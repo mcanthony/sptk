@@ -76,7 +76,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: lspcheck.c,v 1.31 2012/12/15 01:56:08 mataki Exp $";
+static char *rcs_id = "$Id: lspcheck.c,v 1.32 2012/12/17 05:21:26 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -164,7 +164,7 @@ int main(int argc, char **argv)
    Boolean arrange = ARRANGE, gain = GAIN;
    FILE *fp = stdin;
    double *lsp, *lsp1, alpha = ALPHA, sampling = SAMPLING, min;
-   void lsparrange(double *lsp, const int ord, double min, double sampling);
+   void lsparrange(double *lsp, const int ord, double min);
 
    if ((cmnd = strrchr(argv[0], '/')) == NULL)
       cmnd = argv[0];
@@ -246,7 +246,7 @@ int main(int argc, char **argv)
          fprintf(stderr, "[No. %d] is unstable frame\n", num);
       }
       if (arrange) {
-         lsparrange(lsp1 + gain, m, min, sampling);
+         lsparrange(lsp1 + gain, m, min);
       }
 
       if (otype == 0)
