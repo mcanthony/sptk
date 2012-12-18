@@ -73,7 +73,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: swab.c,v 1.26 2012/09/09 09:26:59 okdtmhr Exp $";
+static char *rcs_id = "$Id: swab.c,v 1.27 2012/12/18 12:06:26 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -125,23 +125,25 @@ void usage(int status)
    fprintf(stderr, "       +type  : input and output data format [s]\n");
    fprintf(stderr,
            "                s  (short, %lubyte)        S  (unsigned short, %lubyte)\n",
-           (unsigned long)sizeof(short), (unsigned long)sizeof(unsigned short));
+           (unsigned long) sizeof(short),
+           (unsigned long) sizeof(unsigned short));
    fprintf(stderr,
            "                i3 (int, 3byte)          I3 (unsigned int, 3byte)\n");
    fprintf(stderr,
            "                i  (int, %lubyte)          I  (unsigned int, %lubyte)\n",
-           (unsigned long)sizeof(int), (unsigned long)sizeof(unsigned int));
+           (unsigned long) sizeof(int), (unsigned long) sizeof(unsigned int));
    fprintf(stderr,
            "                l  (long, %lubyte)         L  (unsigned long, %lubyte)\n",
-           (unsigned long)sizeof(long), (unsigned long)sizeof(unsigned long));
+           (unsigned long) sizeof(long), (unsigned long) sizeof(unsigned long));
    fprintf(stderr,
            "                le (long long, %lubyte)    LE (unsigned long long, %lubyte)\n",
-           (unsigned long)sizeof(long long), (unsigned long)sizeof(unsigned long long));
+           (unsigned long) sizeof(long long),
+           (unsigned long) sizeof(unsigned long long));
    fprintf(stderr,
            "                f  (float, %lubyte)        d  (double, %lubyte)\n",
-           (unsigned long)sizeof(float), (unsigned long)sizeof(double));
-   fprintf(stderr,
-           "                de (long double, %lubyte)\n", (unsigned long)sizeof(long double));
+           (unsigned long) sizeof(float), (unsigned long) sizeof(double));
+   fprintf(stderr, "                de (long double, %lubyte)\n",
+           (unsigned long) sizeof(long double));
    fprintf(stderr, "       -h     : print this message\n");
    fprintf(stderr, "  infile:\n");
    fprintf(stderr, "       data sequence                [stdin]\n");
