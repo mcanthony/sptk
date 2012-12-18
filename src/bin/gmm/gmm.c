@@ -70,7 +70,7 @@
  *                                                                       *
  ************************************************************************/
 
-static char *rcs_id = "$Id: gmm.c,v 1.16 2012/08/20 12:36:31 mataki Exp $";
+static char *rcs_id = "$Id: gmm.c,v 1.17 2012/12/18 12:41:08 mataki Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -189,9 +189,9 @@ int main(int argc, char **argv)
    GMM gmm, tgmm, floor;
    double E = DEF_E, V = DEF_V, W = DEF_W,
        *dat, *pd, *cb, *icb, *logwgd, logb, *sum, *sum_m, **sum_v, diff, sum_w,
-       ave_logp0, ave_logp1, change = MAXVALUE, tmp1, tmp2;
+       ave_logp0 = 0.0, ave_logp1, change = MAXVALUE, tmp1, tmp2;
    int l, L = DEF_L, m, M = DEF_M, N, t, T = DEF_T, S =
-       DEF_S, full = FULL, n1, i, j, Imin = DEF_IMIN, Imax =
+       DEF_S, full = FULL, n1 = 0, i, j, Imin = DEF_IMIN, Imax =
        DEF_IMAX, *tindex, *cntcb;
    void cal_inv(double **cov, double **inv, const int L);
    float_list *top, *cur, *prev, *tmpf, *tmpff;
@@ -301,6 +301,7 @@ int main(int argc, char **argv)
       }
    }
 
+   floor.gauss = NULL;
    if (full == 1) {
       floor.gauss = (Gauss *) getmem(1, sizeof(Gauss));
       floor.gauss[0].cov = (double **) malloc(sizeof(double *) * L);

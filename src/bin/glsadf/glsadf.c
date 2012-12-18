@@ -76,7 +76,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: glsadf.c,v 1.32 2011/04/27 13:46:40 mataki Exp $";
+static char *rcs_id = "$Id: glsadf.c,v 1.33 2012/12/18 12:41:08 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -169,7 +169,7 @@ int main(int argc, char **argv)
        PADEORD;
    FILE *fp = stdin, *fpc = NULL;
    Boolean norm = NORM, ngain = NGAIN, transpose = TRANSPOSE, inverse = INVERSE;
-   double *c, *inc, *cc, *d, x, gamma;
+   double *c, *inc, *cc, *d, x, gamma = -1 / (double) STAGE;
 
    if ((cmnd = strrchr(argv[0], '/')) == NULL)
       cmnd = argv[0];

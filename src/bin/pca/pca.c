@@ -82,7 +82,7 @@
 *                                                                                *
 *********************************************************************************/
 
-static char *rcs_id = "$Id: pca.c,v 1.18 2012/08/20 12:36:30 mataki Exp $";
+static char *rcs_id = "$Id: pca.c,v 1.19 2012/12/18 12:41:08 mataki Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -184,7 +184,7 @@ int jacobi(double **m, int n, double eps, double *e_val, double **e_vec,
    int ret;
    double **a;
    double max_e;
-   int r, c;
+   int r = 0, c = 0;
    double a1, a2, a3;
    double co, si;
    double w1, w2;
