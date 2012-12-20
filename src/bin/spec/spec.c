@@ -77,7 +77,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: spec.c,v 1.26 2012/08/13 08:21:43 mataki Exp $";
+static char *rcs_id = "$Id: spec.c,v 1.27 2012/12/20 16:59:35 okdtmhr Exp $";
 
 
 /*  Standard C Libraries  */
@@ -162,7 +162,7 @@ int main(int argc, char **argv)
        ORDERAR, no, i;
    char *filema = "", *filear = "";
    FILE *fp = stdin, *fpma = NULL, *fpar = NULL;
-   double eps = EPS, eps2, k, *x, *y, *mag;
+   double eps = EPS, eps2 = 1, k, *x, *y, *mag;
 
    if ((cmnd = strrchr(argv[0], '/')) == NULL)
       cmnd = argv[0];
@@ -216,12 +216,12 @@ int main(int argc, char **argv)
 
    if (etype == 1 && eps < 0.0) {
       fprintf(stderr, "scep : value of e must be e>=0!\n");
-      exit(1);
+      usage(1);
    }
 
    if (etype == 2 && eps2 >= 0.0) {
       fprintf(stderr, "scep : value of E must be E<0!\n");
-      exit(1);
+      usage(1);
    }
 
    no = leng / 2 + 1;
