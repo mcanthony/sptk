@@ -88,7 +88,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: vstat.c,v 1.31 2012/12/18 12:41:08 mataki Exp $";
+static char *rcs_id = "$Id: vstat.c,v 1.32 2012/12/20 09:23:09 okdtmhr Exp $";
 
 
 /*  Standard C Libralies  */
@@ -589,7 +589,10 @@ int main(int argc, char *argv[])
       } else {
          for (i = 0; i < leng; i++) {
             quicksort(mtmp[i], 0, k - 1);
-            med[i] = mtmp[i][k / 2];
+            if (k % 2 == 1)
+               med[i] = mtmp[i][k / 2];
+            else
+               med[i] = ((mtmp[i][k / 2] + mtmp[i][k / 2 - 1]) / 2);
          }
          fwritef(med, sizeof(*med), leng, stdout);
       }
