@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2011  Nagoya Institute of Technology          */
+/*                1996-2012  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -66,7 +66,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: dmp.c,v 1.26 2012/12/17 04:32:18 mataki Exp $";
+static char *rcs_id = "$Id: dmp.c,v 1.27 2012/12/21 11:27:32 mataki Exp $";
 
 
 /*  Standard C Libraries  */

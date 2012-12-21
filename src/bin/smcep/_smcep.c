@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2011  Nagoya Institute of Technology          */
+/*                1996-2012  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _smcep.c,v 1.23 2012/08/13 08:21:43 mataki Exp $
+    $Id: _smcep.c,v 1.24 2012/12/21 11:27:37 mataki Exp $
 
     Mel-Cepstral Analysis (2nd order all-pass filter)
 

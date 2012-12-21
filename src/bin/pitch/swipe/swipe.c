@@ -1,4 +1,4 @@
-/* Copyright (c) 2009-2011 Kyle Gorman
+/* Copyright (c) 2009-2012 Kyle Gorman
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to 
@@ -67,7 +67,7 @@
 
 /****************************************************************
 
-    $Id: swipe.c,v 1.6 2012/12/09 14:56:16 mataki Exp $
+    $Id: swipe.c,v 1.7 2012/12/21 11:27:36 mataki Exp $
 
 *****************************************************************/
 

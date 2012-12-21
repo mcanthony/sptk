@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2011  Nagoya Institute of Technology          */
+/*                1996-2012  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /*
- * $Id: gcdata.h,v 1.12 2012/08/13 08:21:43 mataki Exp $
+ * $Id: gcdata.h,v 1.13 2012/12/21 11:27:38 mataki Exp $
  *   Hedder for setup plotting parts
  */
 

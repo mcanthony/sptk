@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2011  Nagoya Institute of Technology          */
+/*                1996-2012  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -44,7 +44,7 @@
 
 /************************************************************************
 
-  $Id: _transpose.c,v 1.2 2012/12/15 22:36:49 okdtmhr Exp $
+  $Id: _transpose.c,v 1.3 2012/12/21 11:27:37 mataki Exp $
 
   Transpose a matrix
       transpose(float* buf, int m, int n)

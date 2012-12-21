@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2011  Nagoya Institute of Technology          */
+/*                1996-2012  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -44,7 +44,7 @@
 
 /************************************************************************
 *                                                                       *
-*    $Id: winplay.c,v 1.7 2012/06/04 18:17:07 okdtmhr Exp $";            *
+*    $Id: winplay.c,v 1.8 2012/12/21 11:27:32 mataki Exp $";            *
 *                                                                       *
 *    Simple APIs for playing audio data in windows                      *
 *                                                                       *

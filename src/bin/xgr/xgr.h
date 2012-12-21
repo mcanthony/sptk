@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2011  Nagoya Institute of Technology          */
+/*                1996-2012  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /*
- * $Id: xgr.h,v 1.11 2011/04/27 13:46:44 mataki Exp $
+ * $Id: xgr.h,v 1.12 2012/12/21 11:27:38 mataki Exp $
  *  Headder for xgr
  */
 

@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2011  Nagoya Institute of Technology          */
+/*                1996-2012  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /*****************************************************************
-*  $Id: _ifft.c,v 1.17 2011/04/27 13:46:40 mataki Exp $         *
+*  $Id: _ifft.c,v 1.18 2012/12/21 11:27:34 mataki Exp $         *
 *  NAME:                                                         *
 *      ifft - Inverse Fast Fourier Transform                     *   
 *  SYNOPSIS:                                                     *

@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2011  Nagoya Institute of Technology          */
+/*                1996-2012  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _gcep.c,v 1.19 2012/08/13 08:21:42 mataki Exp $
+    $Id: _gcep.c,v 1.20 2012/12/21 11:27:33 mataki Exp $
 
     Generalized Cepstral Analysis
 

@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2011  Nagoya Institute of Technology          */
+/*                1996-2012  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /********************************************************
-* $Id: eps.c,v 1.18 2012/12/18 12:41:08 mataki Exp $   *
+* $Id: eps.c,v 1.19 2012/12/21 11:27:36 mataki Exp $   *
 *            Setup Commands for EPSF                    *
 ********************************************************/
 

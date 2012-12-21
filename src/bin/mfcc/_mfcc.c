@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2011  Nagoya Institute of Technology          */
+/*                1996-2012  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _mfcc.c,v 1.10 2012/08/13 08:21:42 mataki Exp $
+    $Id: _mfcc.c,v 1.11 2012/12/21 11:27:35 mataki Exp $
 
     Mel-Frequency Cepstral Analysis
 
@@ -95,7 +95,7 @@ double sample_mel(int sample, int num, double fs)
    return freq_mel(freq);
 }
 
-double cal_energy(double *x, const double eps, const int leng)
+double cal_energy(double *x, const int leng)
 {
    int k;
    double energy = 0.0;
@@ -229,7 +229,7 @@ void mfcc(double *in, double *mc, const double sampleFreq, const double alpha,
 
    movem(in, x, sizeof(*in), wlng);
    /* calculate energy */
-   energy = cal_energy(x, eps, wlng);
+   energy = cal_energy(x, wlng);
    pre_emph(x, px, alpha, wlng);
    /* apply hamming window */
    if (usehamming)
