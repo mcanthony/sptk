@@ -70,8 +70,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id =
-    "$Id: transpose.c,v 1.3 2012/12/21 11:27:37 mataki Exp $";
+static char *rcs_id = "$Id: transpose.c,v 1.4 2012/12/22 11:58:50 mataki Exp $";
 
 
 /*  Standard C Libraries  */
