@@ -74,14 +74,14 @@
 *               if -E or -0 option is given, Energy E and 0'th static    *
 *               coefficient C0 is output as follows,                     *
 *                   , mc(0), mc(1), ..., mc(m-1), E (C0)                 *
-*               if Both -E and -0 option is given, C0 is output before   *
-*               E                                                        *
+*               if Both -E and -0 option is given, C0 is output before E *
+*                                                                        *
 *       require:                                                         *
 *               mfcc()                                                   *
 *                                                                        *
 *************************************************************************/
 
-static char *rcs_id = "$Id: mfcc.c,v 1.8 2012/12/21 11:27:35 mataki Exp $";
+static char *rcs_id = "$Id: mfcc.c,v 1.9 2012/12/23 11:15:49 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -148,7 +148,7 @@ void usage(int status)
            "       -l l  : frame length of input                 [%d]\n", WLNG);
    fprintf(stderr,
            "       -L L  : frame length for fft                  [2^n]\n");
-   fprintf(stderr, "               default value 2^n satisfies l <= 2^n\n");
+   fprintf(stderr, "               default value 2^n satisfies l < 2^n\n");
    fprintf(stderr,
            "       -m m  : order of cepstrum                     [%d]\n",
            ORDER);
