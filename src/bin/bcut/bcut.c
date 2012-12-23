@@ -75,7 +75,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: bcut.c,v 1.28 2012/12/21 11:27:31 mataki Exp $";
+static char *rcs_id = "$Id: bcut.c,v 1.29 2012/12/23 12:51:13 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -283,7 +283,7 @@ int main(int argc, char **argv)
       if (freadx(&x, size, 1, fp) != 1)
          break;
       if (int3flg == TR || uint3flg == TR) {
-         z = (int) x;
+         memcpy(&z, &x, size);
          y = z & 0x00FFFFFF;
          if (int3flg == TR && y >> 23 == 1)
             y = y | 0xFF000000;
