@@ -49,7 +49,7 @@ onintr clean
 
 set path    = ( @binpath@ $path )
 set sptkver = '@sptk_version@'
-set cvsid   = '$Id: wav2raw.in,v 1.14 2012/12/23 11:15:49 mataki Exp $'
+set cvsid   = '$Id: wav2raw.in,v 1.15 2012/12/24 14:08:22 mataki Exp $'
 
 
 set cmnd	= $0
@@ -193,7 +193,7 @@ usage:
         echo2 '  usage:'
         echo2 "       $cmnd [ options ] [ infile(s) ]"
         echo2 '  options:'
-        echo2 '       -swab         : change endian                           [FALSE]'
+        echo2 '       -swab         : change endian                             [FALSE]'
         echo2 '       -d d          : destination directory                     [N/A]'
         echo2 '       -n            : normalization with the maximum value'
         echo2 '                       according to bit/sample of the wav file'
