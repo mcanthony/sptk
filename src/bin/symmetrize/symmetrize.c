@@ -67,7 +67,7 @@
 **************************************************************************************/
 
 static char *rcs_id =
-    "$Id: symmetrize.c,v 1.4 2012/12/21 11:27:37 mataki Exp $";
+    "$Id: symmetrize.c,v 1.5 2013/01/03 05:55:14 okdtmhr Exp $";
 
 
 /*  Standard C Libraries  */
@@ -182,13 +182,6 @@ int main(int argc, char *argv[])
       fprintf(stderr, "%s : value of L must be L>=4!\n", cmnd);
       usage();
    }
-   if (fread(buf, sizeof(float), L, fp) < (size_t) L) {
-      fprintf(stderr,
-              "%s : the length of input data is smaller than defined!\n", cmnd);
-      usage();
-   }
-
-   rewind(fp);
 
    while (fread(buf, sizeof(float), L, fp) == (size_t) L) {
 
