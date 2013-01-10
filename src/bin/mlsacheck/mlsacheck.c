@@ -66,7 +66,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: mlsacheck.c,v 1.8 2012/12/21 07:25:56 mataki Exp $";
+static char *rcs_id = "$Id: mlsacheck.c,v 1.9 2013/01/10 05:51:09 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -181,7 +181,7 @@ void mlsacheck(double *mcep, int m, int fftlen, int frame,
    /* calculate gain factor */
    for (i = 0, gain = 0.0; i < m + 1; i++) {
       x[i] = mcep[i];
-      gain += x[i] * pow(a, i);
+      gain += x[i] * pow(-a, i);
    }
 
    /* gain normalization */
