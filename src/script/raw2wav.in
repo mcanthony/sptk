@@ -50,7 +50,7 @@ onintr clean
 
 set path    = ( @binpath@ $path )
 set sptkver = '@sptk_version@'
-set cvsid   = '$Id: raw2wav.in,v 1.8 2012/12/24 14:08:22 mataki Exp $'
+set cvsid   = '$Id: raw2wav.in,v 1.9 2013/01/10 11:48:13 mataki Exp $'
 
 
 set cmnd	= $0
@@ -82,6 +82,10 @@ while ($i < $#argv)
 	case -s:
 		@ i++
 		set frequency = $argv[$i]
+        if ( $frequency > 192) then
+            echo2 "$cmnd : sampling frequency must be less than 192 kHz!"
+            exit 1
+        endif
 		breaksw
     case +c:
         if ($input) then
@@ -295,6 +299,8 @@ usage:
 	echo2 '       as the infile.'
 	echo2 '       However, once a destination directory is specified,'
 	echo2 '       all wav files are stored in that directory.'
+	echo2 '  note:'
+	echo2 '       Sampling frequency must be less than 192 kHz.'
 	echo2 ''
         echo2 " SPTK: version $sptkver"
         echo2 " CVS Info: $cvsid"
