@@ -49,7 +49,7 @@ onintr clean
 
 set path    = ( @binpath@ $path )
 set sptkver = '@sptk_version@'
-set cvsid   = '$Id: wav2raw.in,v 1.16 2013/01/15 09:53:08 mataki Exp $'
+set cvsid   = '$Id: wav2raw.in,v 1.17 2013/01/16 12:06:15 mataki Exp $'
 
 
 set cmnd	= $0
@@ -312,6 +312,13 @@ while ( $j <= $#file )
             endsw
 
             @ Current = $Current + 2
+
+            # Extra format bytes
+            if ($ChunkSize != 16) then
+                @ tmp = $Current + 2
+                set ExtraFormatSize = `bcut +c -s $Current -e $tmp $f | x2x +Sa`
+                @ Current = $Current + 2 + $ExtraFormatSize
+            endif
 
             set READfmt = 1 # enable to read "data" chunk
             if ( $ENTERdatachunk == 0) then
