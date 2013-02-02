@@ -62,7 +62,7 @@
 *                                                                         *
 **************************************************************************/
 
-static char *rcs_id = "$Id: dfs.c,v 1.25 2013/01/08 11:24:12 mataki Exp $";
+static char *rcs_id = "$Id: dfs.c,v 1.26 2013/02/02 15:03:11 mataki Exp $";
 
 
 /* Standard C Libraries */
@@ -235,10 +235,12 @@ int main(int argc, char *argv[])
    }
 
    if (na == -1) {
+      a = dgetmem(1);
       na = 0;
       a[0] = 1.0;
    }
    if (nb == -1) {
+      b = dgetmem(1);
       nb = 0;
       b[0] = 1.0;
    }
