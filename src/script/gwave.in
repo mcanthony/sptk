@@ -57,7 +57,7 @@ onintr clean
 
 set path    = ( @binpath@ $path )
 set sptkver = '@sptk_version@'
-set cvsid   = '$Id: gwave.in,v 1.16 2012/12/22 08:49:48 okdtmhr Exp $'
+set cvsid   = '$Id: gwave.in,v 1.17 2013/02/15 02:50:36 mataki Exp $'
 
 set cmnd = $0
 set cmnd = $cmnd:t
@@ -80,7 +80,7 @@ set flagy       = 0
 @ i = 0
 while ($i < $#argv)
         @ i++
-        switch ($argv[$i])
+        switch ("$argv[$i]")
         case -s:
                 @ i++
                 set start = $argv[$i]
@@ -167,9 +167,9 @@ while ($i < $#argv)
                 goto usage
                 breaksw
         default:
-                set file = $argv[$i]
+                set file = "$argv[$i]"
                 set flagfile = 1
-                if ( ! -f $file ) then
+                if ( ! -f "$file" ) then
                         echo2 "${cmnd} : Cannot open file ${file}\!"
                         set exit_status = 1
                         goto usage
@@ -178,7 +178,11 @@ while ($i < $#argv)
         endsw
 end
 
-cat $file > /tmp/$$
+if ("$file" == "") then
+    cat $file > /tmp/$$
+else
+    cat "$file" > /tmp/$$
+endif
 set file = /tmp/$$
 
 goto main
