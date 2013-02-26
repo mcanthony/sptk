@@ -66,7 +66,8 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: mlsacheck.c,v 1.11 2013/02/19 09:41:55 mataki Exp $";
+static char *rcs_id =
+    "$Id: mlsacheck.c,v 1.12 2013/02/26 15:46:44 uratec Exp $";
 
 
 /*  Standard C Libraries  */
@@ -273,14 +274,8 @@ int main(int argc, char **argv)
             modify_filter = TR;
             break;
          case 'r':
-            switch (**(argv + 1)) {
-            case '0':
-               stable_condition = STABLE1;
-               break;
-            case '1':
-               stable_condition = STABLE2;
-               break;
-            default:
+            stable_condition = atoi(*++argv);
+            if (stable_condition != STABLE1 && stable_condition != STABLE2) {
                fprintf(stderr,
                        "%s : '-r' option must be specified with %d or %d.\n",
                        cmnd, STABLE1, STABLE2);
