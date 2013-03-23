@@ -69,7 +69,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: fd.c,v 1.27 2012/12/21 11:27:32 mataki Exp $";
+static char *rcs_id = "$Id: fd.c,v 1.28 2013/03/23 06:20:37 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -160,7 +160,7 @@ void usage(int status)
 long start = START, mod = MODULO;
 int is_int = 0, entry = ENTRY, is_char = 1, ff = 0;
 size_t size = sizeof(char);
-char adrsfmt = 'd', format[SIZE], form[SIZE], type = 'f';
+char adrsfmt = 'd', format[SIZE], form[SIZE], type = 'c';
 
 int main(int argc, char **argv)
 {
