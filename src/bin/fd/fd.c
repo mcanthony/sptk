@@ -69,7 +69,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: fd.c,v 1.28 2013/03/23 06:20:37 mataki Exp $";
+static char *rcs_id = "$Id: fd.c,v 1.29 2013/04/22 08:26:00 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -331,8 +331,11 @@ void fdump(FILE * fp)
          for (i = 0; (i < entry) && !feof(fp) && (n < mod); i++, n++) {
             switch (type) {
             case 'c':
-               s[i] = (((u.b & 0x7f) < 32) || (u.b == 0x7f)
-                       || (u.b >= 0xe0)) ? '.' : u.b;
+               if (isprint(u.b)) {
+                  s[i] = u.b;
+               } else {
+                  s[i] = '.';
+               }
                if (is_char)
                   printf("%02x ", u.b);
                else
