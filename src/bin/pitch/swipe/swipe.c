@@ -67,7 +67,7 @@
 
 /****************************************************************
 
-    $Id: swipe.c,v 1.8 2012/12/22 12:25:38 mataki Exp $
+    $Id: swipe.c,v 1.9 2013/04/30 05:30:38 mataki Exp $
 
 *****************************************************************/
 
@@ -192,6 +192,8 @@ void La(matrix L, vector f, vector fERBs,
       fo[j][0] = fi_tmp[j];
       fo[j][1] = fo_tmp[j];
     }
+    free(fi_tmp);
+    free(fo_tmp);
 
 #endif
 #if 0

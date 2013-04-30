@@ -67,7 +67,7 @@
 
 /****************************************************************
 
-    $Id: vector.c,v 1.7 2012/12/22 12:25:38 mataki Exp $
+    $Id: vector.c,v 1.8 2013/04/30 05:30:38 mataki Exp $
 
 *****************************************************************/
 
@@ -588,6 +588,7 @@ static void dgels(int n, vector Ap, vector bp)
   LU(n, a.m);
   /* solve linear equation via LU decomposition */
   SOLVE(n, a.m, bp.v);
+  freem(a);
 }
 
 #endif
