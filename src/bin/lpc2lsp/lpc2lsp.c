@@ -54,7 +54,7 @@
 *               -m m  :  order of LPC                            [25]    *
 *               -s s  :  sampling frequency                      [10]    *
 *               -k    :  output gain                             [TRUE]  *
-*               -l    :  output log gain rather than linear gain [FALSE] *
+*               -L    :  output log gain rather than linear gain [FALSE] *
 *               -o o  :  output format                           [0]     *
 *                          0 (normalized frequency [0...pi])             *
 *                          1 (normalized frequency [0...0.5])            *
@@ -80,7 +80,7 @@
 *                                                                        *
 *************************************************************************/
 
-static char *rcs_id = "$Id: lpc2lsp.c,v 1.31 2012/12/21 11:27:35 mataki Exp $";
+static char *rcs_id = "$Id: lpc2lsp.c,v 1.32 2013/09/04 01:45:27 artk0816 Exp $";
 
 
 /*  Standard C Libraries  */
@@ -138,7 +138,7 @@ void usage(int status)
            "       -k    : output gain                             [%s]\n",
            BOOL[GAIN]);
    fprintf(stderr,
-           "       -l    : output log gain rather than linear gain [%s]\n",
+           "       -L    : output log gain rather than linear gain [%s]\n",
            BOOL[LOGGAIN]);
    fprintf(stderr,
            "       -o o  : output format                           [%d]\n",
@@ -215,6 +215,7 @@ int main(int argc, char **argv)
             gain = 1 - gain;
             break;
          case 'l':
+         case 'L':
             loggain = 1 - loggain;
             break;
          case 'h':
