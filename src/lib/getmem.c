@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /********************************************************************
-    $Id: getmem.c,v 1.14 2012/12/21 09:45:26 mataki Exp $
+    $Id: getmem.c,v 1.15 2013/09/07 08:03:21 mataki Exp $
 
     Memory Allocation Functions
 
@@ -111,4 +111,18 @@ real *rgetmem(const int leng)
 float **ffgetmem(const int leng)
 {
    return ((float **) getmem((size_t) leng, sizeof(float *)));
+}
+
+double **ddgetmem(const int x, const int y)
+{
+   int i, j;
+   double **tmp, *tmp2;
+   tmp = (double **) getmem(sizeof(double *), x);
+   tmp2 = dgetmem(x * y);
+
+   for (i = 0, j = 0; i < x; i++, j += y) {
+      tmp[i] = tmp2 + j;
+   }
+
+   return (tmp);
 }
