@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /***********************************************************
-   $Id: SPTK.h,v 1.47 2013/09/07 08:03:21 mataki Exp $ 
+   $Id: SPTK.h,v 1.48 2013/09/09 06:50:33 artk0816 Exp $ 
    
    Speech Signal Processing Toolkit
    SPTK.h
@@ -247,6 +247,7 @@ int lpc2lsp(double *lpc, double *lsp, const int order, const int numsp,
             const int maxitr, const double eps);
 int lpc2par(double *a, double *k, const int m);
 void lsp2lpc(double *lsp, double *a, const int m);
+void lsp2sp(double *lsp, const int m, double *x, const int l, const int gain);
 int lspcheck(double *lsp, const int ord);
 double lspdf_even(double x, double *f, const int m, double *d);
 double lspdf_odd(double x, double *f, const int m, double *d);
