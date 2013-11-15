@@ -1,8 +1,8 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.7 2012/07/02 11:36:51 mataki Exp $
+## $Id: Makefile.am,v 1.8 2013/11/15 06:22:59 mataki Exp $
 if USEDA
-INCLUDES = -I$(top_srcdir)/include
+AM_CPPFLAGS = -I$(top_srcdir)/include
 bin_PROGRAMS = dawrite
 bin_SCRIPTS = da.sh
 dawrite_SOURCES = da.h dawrite.c winplay.c winplay.h
