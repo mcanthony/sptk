@@ -74,7 +74,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: merge.c,v 1.29 2012/12/21 11:27:35 mataki Exp $";
+static char *rcs_id = "$Id: merge.c,v 1.30 2013/11/18 10:00:01 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -309,8 +309,9 @@ int main(int argc, char **argv)
       }
    }
 
-   if (feof(fp1) && feof(fp2))
-      return (0);
-   else
-      return (1);
+   if ((fgetc(fp1) == EOF) && (fgetc(fp2) == EOF)) {
+      if (feof(fp1) && feof(fp2))
+         return (0);
+   }
+   return (1);
 }
