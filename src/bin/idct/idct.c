@@ -44,7 +44,7 @@
 
 /************************************************************************
 *                                                                       *
-*    IDCT : Inverse Discrete Cosine Transformation                      *
+*    IDCT : Inverse Discrete Cosine Transform                           *
 *                                                                       *
 *                                             2011.4 Akira Tamamori     *
 *                                                                       *
@@ -61,7 +61,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: idct.c,v 1.7 2012/12/21 11:27:33 mataki Exp $";
+static char *rcs_id = "$Id: idct.c,v 1.8 2013/11/22 05:36:26 mataki Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -108,7 +108,7 @@ int size = SIZE;
 int usage(void)
 {
    fprintf(stderr, "\n");
-   fprintf(stderr, " %s - Inverse Discrete Cosine Transformation\n", cmnd);
+   fprintf(stderr, " %s - Inverse Discrete Cosine Transform\n", cmnd);
    fprintf(stderr, "\n");
    fprintf(stderr, "  usage:\n");
    fprintf(stderr, "       %s [ options ] [ infile ] > stdout\n", cmnd);

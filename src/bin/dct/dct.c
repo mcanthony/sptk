@@ -44,7 +44,7 @@
 
 /************************************************************************
 *                                                                       *
-*    DCT : Discrete Cosine Transformation                               *
+*    DCT : Discrete Cosine Transform                                    *
 *                                                                       *
 *                                                                       *
 *       usage:                                                          *
@@ -58,7 +58,7 @@
 *               input is assumed to be double                           *
 *                                                                       *
 ************************************************************************/
-static char *rcs_id = "$Id: dct.c,v 1.20 2012/12/21 11:27:32 mataki Exp $";
+static char *rcs_id = "$Id: dct.c,v 1.21 2013/11/22 05:36:26 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -99,7 +99,7 @@ char *cmnd;
 int usage(void)
 {
    fprintf(stderr, "\n");
-   fprintf(stderr, " %s -dct: Discrete Cosine Transformation  \n", cmnd);
+   fprintf(stderr, " %s -dct: Discrete Cosine Transform\n", cmnd);
    fprintf(stderr, "\n");
    fprintf(stderr, "  usage:\n");
    fprintf(stderr, "       %s [ options ] [ infile ] > stdout\n", cmnd);
