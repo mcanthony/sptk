@@ -52,10 +52,10 @@
 #                                                                       #
 #########################################################################
 
-set path        = ( @binpath@/.bin @binpath@ $path )
+set path        = ( @sharepath@ @binpath@ $path )
 set libpath     = '@libpath@'
 set sptkver     = '@sptk_version@'
-set cvsid       = '$Id: da.in,v 1.13 2013/11/18 12:11:16 mataki Exp $'
+set cvsid       = '$Id: da.in,v 1.14 2013/11/26 02:06:19 mataki Exp $'
 
 set cmnd        = $0
 set cmnd        = $cmnd:t

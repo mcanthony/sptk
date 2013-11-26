@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.9 2013/11/15 07:16:53 mataki Exp $
+## $Id: Makefile.am,v 1.10 2013/11/26 02:06:19 mataki Exp $
 bin_PROGRAMS = us
 bin_SCRIPTS = us16.sh uscd.sh
 us_SOURCES = us.c 
@@ -41,19 +41,19 @@ install-binSCRIPTS: $(bin_SCRIPTS)
 	  if test -f $$d$$p; then \
 	    f=`echo "$$p" | sed 's|^.*/||;$(transform)'`; \
 	    echo " $(binSCRIPT_INSTALL) '$$d$$p' '$(DESTDIR)$(bindir)/$$f'"; \
-	    $(binSCRIPT_INSTALL) "$$d$$p" "$(DESTDIR)$(bindir)/$$f"; \
+	    $(binSCRIPT_INSTALL) "$$d$$p" "$(datarootdir)/SPTK/$$f"; \
 	  else :; fi; \
 	  p2=`basename $$p .sh`; \
 	  rm -f "$(DESTDIR)$(bindir)/$$p2"; \
-	  (cd $(DESTDIR)$(bindir); $(LN_S) $$p  $$p2) \
+	  (cd $(DESTDIR)$(bindir); $(LN_S) "$(datarootdir)/SPTK/$$p"  $$p2) \
 	done
 
 uninstall-binSCRIPTS:
 	@$(NORMAL_UNINSTALL)
 	@list='$(bin_SCRIPTS)'; for p in $$list; do \
 	  f=`echo "$$p" | sed 's|^.*/||;$(transform)'`; \
-	  echo " rm -f '$(DESTDIR)$(bindir)/$$f'"; \
-	  rm -f "$(DESTDIR)$(bindir)/$$f"; \
+	  echo " rm -f '$(datarootdir)/SPTK/$$f'"; \
+	  rm -f "$(datarootdir)/SPTK/$$f"; \
 	  p2=`basename $$p .sh`; \
 	  rm -f "$(DESTDIR)$(bindir)/$$p2"; \
 	done
