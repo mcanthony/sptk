@@ -53,7 +53,7 @@
 
 set path    = ( @binpath@ $path )
 set sptkver = '@sptk_version@'
-set cvsid   = '$Id: mgc2mgclsp.in,v 1.5 2013/11/18 11:47:43 artk0816 Exp $'
+set cvsid   = '$Id: mgc2mgclsp.in,v 1.6 2013/11/26 04:46:05 artk0816 Exp $'
 
 set cmnd = $0
 set cmnd = $cmnd:t
@@ -157,9 +157,9 @@ usage:
 	echo2 '                       2 (frequency [kHz])'
 	echo2 '                       3 (frequency [Hz])'
 	echo2 '       -s s          : sampling frequency                     [10kHz]'
-	echo2 '       -k            : output gain                     	     [TRUE]'
+	echo2 '       -k            : output gain                            [TRUE]'
 	echo2 '       -l            : output log gain rater than linear gain [FALSE]'
-	echo2 '	    (level 2)'
+	echo2 '    (level 2)'
 	echo2 '       -n n          : split number of unit circle            [128]'
 	echo2 '       -p p          : maximum number of interpolation        [4]'
 	echo2 '       -d d          : end condition of interpolation         [1e-06]'
