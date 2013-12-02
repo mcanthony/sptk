@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _gmm.c,v 1.14 2013/09/05 10:23:06 mataki Exp $
+    $Id: _gmm.c,v 1.15 2013/12/02 04:11:37 mataki Exp $
 
     GMM output prob calculation functions
 
@@ -345,6 +345,7 @@ int load_GMM(GMM * gmm, int M, int L, Boolean full, FILE * fp)
 {
    int m, l;
 
+   gmm->nmix = M;
    freadf(gmm->weight, sizeof(*(gmm->weight)), M, fp);
    for (m = 0; m < M; m++) {
       freadf(gmm->gauss[m].mean, sizeof(*(gmm->gauss[m].mean)), L, fp);
