@@ -75,7 +75,7 @@
 *                -j j     :  maximum iteration                 [30]     *
 *                -d d     :  end condition                     [0.001]  *
 *                -p p     :  order of recursions               [l-1]    *
-*                -e e     :  small value added to periodogram   [0]     *
+*                -e e     :  small value added to periodogram  [0]      *
 *                -E E     :  floor in db calculated per frame  [N/A]    *
 *                -f f     :  mimimum value of the determinant           *
 *                            of the normal matrix            [0.000001] *
@@ -95,7 +95,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: mgcep.c,v 1.38 2013/03/24 06:19:17 okdtmhr Exp $";
+static char *rcs_id = "$Id: mgcep.c,v 1.39 2013/12/09 05:33:33 uratec Exp $";
 
 
 /*  Standard C Libraries  */
