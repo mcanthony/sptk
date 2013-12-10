@@ -63,7 +63,8 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: decimate.c,v 1.23 2013/02/26 23:57:04 okdtmhr Exp $";
+static char *rcs_id =
+    "$Id: decimate.c,v 1.24 2013/12/10 08:36:53 mataki Exp $";
 
 
 /*  Standard C Libraries  */

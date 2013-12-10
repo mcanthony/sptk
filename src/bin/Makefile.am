@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.20 2013/09/09 06:50:32 artk0816 Exp $
+## $Id: Makefile.am,v 1.21 2013/12/10 08:36:53 mataki Exp $
 
 SUBDIRS = acep \
 	acorr \
@@ -107,6 +107,7 @@ SUBDIRS = acep \
 	uels \
 	ulaw \
 	us \
+	vc \
 	vopr \
 	vq \
 	vstat \
@@ -117,4 +118,4 @@ SUBDIRS = acep \
 	zcross \
 	zerodf
 
-EXTRA_DIST = pitch/snack/COPYING pitch/swipe/COPYING
+EXTRA_DIST = pitch/snack/COPYING pitch/swipe/COPYING vc/hts_engine_API/COPYING
