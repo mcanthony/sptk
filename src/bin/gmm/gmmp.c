@@ -62,7 +62,7 @@
  *                                                                       *
  ************************************************************************/
 
-static char *rcs_id = "$Id: gmmp.c,v 1.12 2013/12/09 09:04:42 mataki Exp $";
+static char *rcs_id = "$Id: gmmp.c,v 1.13 2013/12/10 06:11:45 mataki Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -189,10 +189,10 @@ int main(int argc, char **argv)
    x = dgetmem(L);
    while (freadf(x, sizeof(*x), L, fp) == L) {
       if (!aflag) {
-         logp = log_outp(&gmm, x);
+         logp = log_outp(&gmm, L, x);
          fwritef(&logp, sizeof(double), 1, stdout);
       } else {
-         ave_logp += log_outp(&gmm, x);
+         ave_logp += log_outp(&gmm, L, x);
          T++;
       }
    }
