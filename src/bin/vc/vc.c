@@ -71,7 +71,7 @@
 *                                                                             *
 *******************************************************************************/
 
-static char *rcs_id = "$Id: vc.c,v 1.2 2013/12/10 11:11:56 mataki Exp $";
+static char *rcs_id = "$Id: vc.c,v 1.3 2013/12/10 11:24:02 mataki Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -216,6 +216,10 @@ int main(int argc, char **argv)
    GMM gmm;
    DELTAWINDOW window;
 
+   for (j = 0; j < argc; j++) {
+      dw_isfloat[j] = FA;
+   }
+
    if ((cmnd = strrchr(argv[0], '/')) == NULL) {
       cmnd = argv[0];
    } else {
@@ -269,7 +273,6 @@ int main(int argc, char **argv)
                   }
                }
             } else {
-               dw_isfloat[dw_num] = FA;
                dw_fn[dw_num] = *argv;
             }
             dw_num++;
