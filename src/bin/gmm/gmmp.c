@@ -62,7 +62,7 @@
  *                                                                       *
  ************************************************************************/
 
-static char *rcs_id = "$Id: gmmp.c,v 1.13 2013/12/10 06:11:45 mataki Exp $";
+static char *rcs_id = "$Id: gmmp.c,v 1.14 2013/12/10 08:09:33 mataki Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -84,8 +84,6 @@ static char *rcs_id = "$Id: gmmp.c,v 1.13 2013/12/10 06:11:45 mataki Exp $";
 #else
 #  include <SPTK.h>
 #endif
-
-#include "gmm.h"
 
 /*  Default Values  */
 
