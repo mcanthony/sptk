@@ -1,7 +1,7 @@
 
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.16 2013/09/09 06:50:33 artk0816 Exp $
+## $Id: Makefile.am,v 1.17 2013/12/14 11:30:09 mataki Exp $
 INCLUDES=-I$(top_srcdir)/include
 lib_LIBRARIES = libSPTK.a
 libSPTK_a_SOURCES = agexp.c \
@@ -86,6 +86,7 @@ nodist_libSPTK_a_SOURCES = $(top_srcdir)/include/SPTK.h \
 		$(top_srcdir)/bin/transpose/_transpose.c \
 		$(top_srcdir)/bin/uels/_uels.c \
 		$(top_srcdir)/bin/ulaw/_ulaw.c \
+		$(top_srcdir)/bin/vc/_vc.c \
 		$(top_srcdir)/bin/vq/_vq.c \
 		$(top_srcdir)/bin/window/_window.c \
 		$(top_srcdir)/bin/zcross/_zcross.c \

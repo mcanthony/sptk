@@ -44,7 +44,7 @@
 
 /*********************************************************************
 *                                                                    *
-*    $Id: _vc.c,v 1.3 2013/12/10 11:40:33 mataki Exp $               *
+*    $Id: _vc.c,v 1.4 2013/12/14 11:30:09 mataki Exp $               *
 *                                                                    *
 *    module for vc command                                           *
 *                                                                    *
@@ -60,8 +60,8 @@
 #  include <SPTK.h>
 #endif
 
-#include "HTS_engine.h"
-#include "HTS_hidden.h"
+#include "hts_engine_API/HTS_engine.h"
+#include "hts_engine_API/HTS_hidden.h"
 
 /* perform conversion */
 int vc(const GMM * gmm, const DELTAWINDOW * window, const size_t total_frame,
