@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.10 2013/11/26 02:06:19 mataki Exp $
+## $Id: Makefile.am,v 1.11 2013/12/14 17:30:41 mataki Exp $
 if USEDA
 AM_CPPFLAGS = -I$(top_srcdir)/include
 bin_PROGRAMS = dawrite
@@ -53,7 +53,7 @@ uninstall-binSCRIPTS:
 
 install-binPROGRAMS: $(bin_PROGRAMS)
 	@$(NORMAL_INSTALL)
-	test -z "$(bindir)" || $(MKDIR_P) "$(datarootdir)"
+	test -z "$(bindir)" || $(MKDIR_P) "$(datarootdir)/SPTK"
 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
 	  p1=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
 	  if test -f $$p \
