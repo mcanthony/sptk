@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /***********************************************************
-   $Id: SPTK.h,v 1.52 2013/12/10 08:36:54 mataki Exp $ 
+   $Id: SPTK.h,v 1.53 2013/12/15 07:36:12 mataki Exp $ 
    
    Speech Signal Processing Toolkit
    SPTK.h
@@ -68,6 +68,7 @@
 #define LN_TO_LOG 4.3429448190325182765
 
 #define LZERO (-1.0e+10)
+#define LSMALL (-0.5e+10)
 
 /* #ifndef ABS(x) */
 #define ABS(x) ((x<0.0) ? -x : x)

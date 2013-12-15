@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _gmm.c,v 1.18 2013/12/10 08:09:33 mataki Exp $
+    $Id: _gmm.c,v 1.19 2013/12/15 07:36:12 mataki Exp $
 
     GMM output prob calculation functions
 
@@ -59,8 +59,6 @@
 #else
 #  include <SPTK.h>
 #endif
-
-#define LSMALL (-0.5E10)        /* log values < LSMALL are set to LZERO */
 
 int choleski(double **cov, double **S, const int L);
 

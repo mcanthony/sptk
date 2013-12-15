@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /***************************************************************
-    $Id: _lsp2sp.c,v 1.1 2013/09/09 06:50:32 artk0816 Exp $
+    $Id: _lsp2sp.c,v 1.2 2013/12/15 07:36:12 mataki Exp $
 
     Transform LSP to spectrum
 
@@ -66,8 +66,6 @@
 #  include <SPTK.h>
 #endif
 
-#define LZERO  (-1.0E200)       /* ~log(0) */
-#define LSMALL (-0.5E200)       /* log values < LSMALL are set to LZERO */
 #define LOG2 (0.693147180559945)
 
 double log_conv(double x)
