@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2012  Nagoya Institute of Technology          */
+/*                1996-2013  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /***************************************************************
-    $Id: _lsp2sp.c,v 1.2 2013/12/15 07:36:12 mataki Exp $
+    $Id: _lsp2sp.c,v 1.3 2013/12/16 09:01:59 mataki Exp $
 
     Transform LSP to spectrum
 

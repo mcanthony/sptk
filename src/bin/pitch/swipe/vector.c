@@ -31,7 +31,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2012  Nagoya Institute of Technology          */
+/*                1996-2013  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -67,7 +67,7 @@
 
 /****************************************************************
 
-    $Id: vector.c,v 1.8 2013/04/30 05:30:38 mataki Exp $
+    $Id: vector.c,v 1.9 2013/12/16 09:02:02 mataki Exp $
 
 *****************************************************************/
 

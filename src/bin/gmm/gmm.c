@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2012  Nagoya Institute of Technology          */
+/*                1996-2013  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -73,7 +73,7 @@
  *                                                                         *
  **************************************************************************/
 
-static char *rcs_id = "$Id: gmm.c,v 1.21 2013/12/10 08:09:33 mataki Exp $";
+static char *rcs_id = "$Id: gmm.c,v 1.22 2013/12/16 09:01:57 mataki Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>

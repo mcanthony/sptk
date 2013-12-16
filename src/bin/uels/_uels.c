@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2012  Nagoya Institute of Technology          */
+/*                1996-2013  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -44,7 +44,7 @@
 
 /****************************************************************
 
-    $Id: _uels.c,v 1.26 2013/03/24 06:56:53 okdtmhr Exp $
+    $Id: _uels.c,v 1.27 2013/12/16 09:02:04 mataki Exp $
 
     Unbiased Estimation of Log Spectrum
 
