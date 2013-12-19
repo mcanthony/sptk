@@ -79,7 +79,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: lspcheck.c,v 1.36 2013/12/19 02:05:54 mataki Exp $";
+static char *rcs_id = "$Id: lspcheck.c,v 1.37 2013/12/19 02:28:27 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -228,6 +228,7 @@ int main(int argc, char **argv)
          case 'k':
             gain = 1 - gain;
             break;
+         case 'l':
          case 'L':
             loggain = 1 - loggain;
             break;

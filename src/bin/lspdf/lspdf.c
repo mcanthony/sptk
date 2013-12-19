@@ -70,7 +70,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: lspdf.c,v 1.28 2013/12/19 02:05:54 mataki Exp $";
+static char *rcs_id = "$Id: lspdf.c,v 1.29 2013/12/19 02:28:27 mataki Exp $";
 
 
 /*  Standard C Libralies  */
@@ -175,6 +175,7 @@ int main(int argc, char **argv)
          case 'k':
             ngain = 1 - ngain;
             break;
+         case 'l':
          case 'L':
             loggain = 1 - loggain;
             break;
