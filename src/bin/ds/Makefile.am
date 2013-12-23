@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.7 2013/12/22 16:58:55 uratec Exp $
+## $Id: Makefile.am,v 1.8 2013/12/23 14:27:17 uratec Exp $
 lpcoefdir = $(datarootdir)/SPTK
 
 bin_PROGRAMS = ds
@@ -13,4 +13,4 @@ dist_lpcoef_DATA = lpfcoef.2to1 \
 	lpfcoef.4to3 \
 	lpfcoef.5to2dn \
 	lpfcoef.5to2up \
-	emime/lpfcoef.7to4
+	titech/lpfcoef.7to4

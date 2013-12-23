@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.22 2013/12/22 16:58:55 uratec Exp $
+## $Id: Makefile.am,v 1.23 2013/12/23 14:27:17 uratec Exp $
 
 SUBDIRS = acep \
 	acorr \
@@ -118,4 +118,4 @@ SUBDIRS = acep \
 	zcross \
 	zerodf
 
-EXTRA_DIST = pitch/snack/COPYING pitch/swipe/COPYING vc/hts_engine_API/COPYING ds/emime/COPYING us/emime/COPYING
+EXTRA_DIST = pitch/snack/COPYING pitch/swipe/COPYING vc/hts_engine_API/COPYING ds/titech/COPYING us/titech/COPYING

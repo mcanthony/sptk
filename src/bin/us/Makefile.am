@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.11 2013/12/22 16:58:56 uratec Exp $
+## $Id: Makefile.am,v 1.12 2013/12/23 14:27:17 uratec Exp $
 bin_PROGRAMS = us
 bin_SCRIPTS = us16.sh uscd.sh
 us_SOURCES = us.c 
@@ -12,11 +12,11 @@ us_CPPFLAGS = -DLIB=\"$(lpcoefdir)\" -I$(top_srcdir)/include
 dist_lpcoef_DATA = lpfcoef.2to3f \
 	lpfcoef.2to3s \
 	lpfcoef.3to4 \
-	emime/lpfcoef.3to5 \
+	titech/lpfcoef.3to5 \
 	lpfcoef.4to5 \
 	lpfcoef.5to7 \
 	lpfcoef.5to8 \
-	emime/lpfcoef.7to8
+	titech/lpfcoef.7to8
 
 EXTRA_DIST = us16.in uscd.in
 CLEANFILES = $(bin_PROGRAMS) $(bin_SCRIPTS)
