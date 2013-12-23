@@ -67,7 +67,7 @@
 **************************************************************************************/
 
 static char *rcs_id =
-    "$Id: symmetrize.c,v 1.7 2013/12/16 09:02:04 mataki Exp $";
+    "$Id: symmetrize.c,v 1.8 2013/12/23 00:02:41 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -136,7 +136,7 @@ int main(int argc, char *argv[])
    int i, o = OTYPE, L = FLENG;
    char *s, c;
    FILE *fp = stdin;
-   float *buf, tmp;
+   double *buf, tmp;
 
    if ((cmnd = strrchr(argv[0], '/')) == NULL)
       cmnd = argv[0];
@@ -172,7 +172,7 @@ int main(int argc, char *argv[])
    }
 
    L /= 2;
-   buf = fgetmem(L);
+   buf = dgetmem(L);
 
    if ((o != 0) && (o != 1) && (o != 2)) {
       fprintf(stderr, "%s : invalid output type %d\n", cmnd, o);

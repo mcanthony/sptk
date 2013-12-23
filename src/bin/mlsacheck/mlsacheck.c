@@ -81,7 +81,7 @@
 ************************************************************************/
 
 static char *rcs_id =
-    "$Id: mlsacheck.c,v 1.14 2013/12/16 09:02:01 mataki Exp $";
+    "$Id: mlsacheck.c,v 1.15 2013/12/23 00:02:41 mataki Exp $";
 
 
 /*  Standard C Libraries  */
@@ -189,7 +189,7 @@ void mlsacheck(double *mcep, int m, int fftlen, int frame,
                double a, double r1, double r2, int c, int stable_condition)
 {
    int i;
-   double gain, r, *x, *y, mag, max = 0.0, tmp;
+   double gain, r, *x, *y, mag, max = 0.0, tmp = 1.0;
    Boolean ascii_report = FA;
 
    x = dgetmem(fftlen);
@@ -298,7 +298,6 @@ int main(int argc, char **argv)
    int m = ORDER, pd = PADEORDER, fftlen = FFTLENGTH, stable_condition =
        STABLE1, frame = 0, c = 0;
    double *mcep, a = ALPHA, r1 = PADE4_THRESH1, r2 = PADE4_THRESH2, R = 0.0;
-   Boolean modify_filter = FA;
    FILE *fp = stdin;
 
    if ((cmnd = strrchr(argv[0], '/')) == NULL) {
