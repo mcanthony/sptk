@@ -77,7 +77,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: lsp2sp.c,v 1.2 2013/12/16 09:01:59 mataki Exp $";
+static char *rcs_id = "$Id: lsp2sp.c,v 1.3 2014/02/20 02:29:17 artk0816 Exp $";
 
 
 /*  Standard C Libraries  */
@@ -264,6 +264,9 @@ int main(int argc, char **argv)
       }
       fwritef(x, sizeof(*x), no, stdout);
    }
+
+   free(x);
+   free(lsp);
 
    return (0);
 }

@@ -43,14 +43,14 @@
 /* ----------------------------------------------------------------- */
 
 /***************************************************************
-    $Id: _lsp2sp.c,v 1.3 2013/12/16 09:01:59 mataki Exp $
+    $Id: _lsp2sp.c,v 1.4 2014/02/20 02:29:18 artk0816 Exp $
 
     Transform LSP to spectrum
 
         void   lsp2sp(lsp, m, x, l)
 
-        double   *lsp  : cepstrum
-        int      m   : order of cepstrum
+        double   *lsp  : LSP
+        int      m   : order of LSP
         double   *x  : real part of spectrum
         double   l   : FFT length
 
