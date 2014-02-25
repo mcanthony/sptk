@@ -75,7 +75,7 @@
 *                                                                          *
 ***************************************************************************/
 
-static char *rcs_id = "$Id: dtw.c,v 1.8 2013/12/16 09:01:55 mataki Exp $";
+static char *rcs_id = "$Id: dtw.c,v 1.9 2014/02/25 07:58:34 mataki Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -184,8 +184,8 @@ double *read_input(FILE * fp, int dim, int *length)
       cur = tmp;
       next = tmp->next;
       free(cur->f);
-      free(cur);
       cur->f = NULL;
+      free(cur);
       cur = NULL;
    }
    free(top);
