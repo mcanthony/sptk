@@ -1,4 +1,4 @@
-#! @cshpath@ -f
+#!@csh@ -f
 # ----------------------------------------------------------------- #
 #             The Speech Signal Processing Toolkit (SPTK)           #
 #             developed by SPTK Working Group                       #
@@ -53,10 +53,10 @@
 #                                                                       #
 #########################################################################
 
-set path    = ( @binpath@ $path )
-set libpath = '@libpath@'
-set sptkver = '@sptk_version@'
-set cvsid   = '$Id: uscd.in,v 1.13 2013/12/16 09:02:05 mataki Exp $'
+set path    = ( @bindir@ $path )
+set libpath = '@pkgdatadir@'
+set sptkver = '@package_version@'
+set cvsid   = '$Id: uscd.in,v 1.14 2014/03/26 13:35:08 uratec Exp $'
 
 set cmnd = $0
 set cmnd = $cmnd:t

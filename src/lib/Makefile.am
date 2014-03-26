@@ -1,8 +1,8 @@
 
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.17 2013/12/14 11:30:09 mataki Exp $
-INCLUDES=-I$(top_srcdir)/include
+## $Id: Makefile.am,v 1.18 2014/03/26 13:35:08 uratec Exp $
+AM_CPPFLAGS = -I$(top_srcdir)/include
 lib_LIBRARIES = libSPTK.a
 libSPTK_a_SOURCES = agexp.c \
 	      cholesky.c \
