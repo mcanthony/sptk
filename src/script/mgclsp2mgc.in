@@ -53,7 +53,7 @@
 
 set path    = ( @bindir@ $path )
 set sptkver = '@package_version@'
-set cvsid   = '$Id: mgclsp2mgc.in,v 1.7 2014/03/26 13:35:08 uratec Exp $'
+set cvsid   = '$Id: mgclsp2mgc.in,v 1.8 2014/04/24 02:15:22 artk0816 Exp $'
 
 set cmnd = $0
 set cmnd = $cmnd:t
@@ -91,6 +91,7 @@ while ($i < $#argv)
 		set lg = "-L"
 		breaksw
 	case -i:
+	case -q:
 		@ i++
 		set in = $argv[$i]
 		breaksw
@@ -133,7 +134,7 @@ usage:
 	echo2 '       -a a          : alpha of mel-generalized cepstrum               [0.35]'
 	echo2 '       -g g          : gamma of mel-generalized cepstrum               [-1]'
         echo2 '       -c c          : gamma of mel-generalized cepstrum = -1 / (int) c (input) '
-	echo2 '       -i i          : input format                                    [0]'
+	echo2 '       -q q          : input format                                    [0]'
 	echo2 '                       0 (normalized frequency [0...pi])'
 	echo2 '                       1 (normalized frequency [0...0.5])'
 	echo2 '                       2 (frequency [kHz])'
