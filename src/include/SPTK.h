@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /***********************************************************
-   $Id: SPTK.h,v 1.55 2014/02/27 09:01:31 artk0816 Exp $ 
+   $Id: SPTK.h,v 1.56 2014/04/24 04:35:26 artk0816 Exp $ 
    
    Speech Signal Processing Toolkit
    SPTK.h
@@ -276,6 +276,8 @@ void mgc2mgc(double *c1, const int m1, const double a1, const double g1,
              double *c2, const int m2, const double a2, const double g2);
 void mgc2sp(double *mgc, const int m, const double a, const double g, double *x,
             double *y, const int flng);
+void mgclsp2sp(double a, double g, double *lsp, const int m, double *x,
+               const int l, const int gain);
 int mgcep(double *xw, int flng, double *b, const int m, const double a,
           const double g, const int n, const int itr1, const int itr2,
           const double dd, const int etype, const double e, const double f,

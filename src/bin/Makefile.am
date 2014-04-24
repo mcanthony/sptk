@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.24 2014/02/27 09:10:35 artk0816 Exp $
+## $Id: Makefile.am,v 1.25 2014/04/24 04:35:26 artk0816 Exp $
 
 SUBDIRS = acep \
 	acorr \
@@ -74,6 +74,7 @@ SUBDIRS = acep \
 	mfcc \
 	mgc2mgc \
 	mgc2sp \
+	mgclsp2sp \
 	mgcep \
 	mglsadf \
 	minmax \
