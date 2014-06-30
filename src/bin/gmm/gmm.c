@@ -73,7 +73,7 @@
  *                                                                         *
  **************************************************************************/
 
-static char *rcs_id = "$Id: gmm.c,v 1.22 2013/12/16 09:01:57 mataki Exp $";
+static char *rcs_id = "$Id: gmm.c,v 1.23 2014/06/30 10:53:17 uratec Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -553,8 +553,6 @@ int main(int argc, char **argv)
             cal_inv(gmm.gauss[m].cov, gmm.gauss[m].inv, L);
          }
       }
-      if (full == TR)
-         fprintf(stderr, "%d cov can't caluculate covdet\n", n1);
 
       for (t = 0, ave_logp1 = 0.0, pd = dat; t < T; t++, pd += L) {
          for (m = 0, logb = LZERO; m < M; m++) {
