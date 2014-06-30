@@ -73,10 +73,11 @@
 *                                                                             *
 *******************************************************************************/
 
-static char *rcs_id = "$Id: vc.c,v 1.6 2014/06/27 04:53:55 artk0816 Exp $";
+static char *rcs_id = "$Id: vc.c,v 1.7 2014/06/30 07:00:59 artk0816 Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include <math.h>
 
 #ifdef HAVE_STRING_H
@@ -184,7 +185,8 @@ void usage(int status)
    fprintf(stderr,
            "       -e e              : small value added to                       [%g]\n",
            FLOOR);
-   fprintf(stderr, "                           diagonal component of covariance\n");
+   fprintf(stderr,
+           "                           diagonal component of covariance\n");
    fprintf(stderr, "       -h                : print this message\n");
    fprintf(stderr, "  infile:\n");
    fprintf(stderr,
@@ -374,7 +376,7 @@ int main(int argc, char **argv)
    /* flooring for diagonal component of covariance */
    if (floor != 0.0) {
       for (i = 0; i < num_mix; i++) {
-         for (j = 0; j < len_total; j++) {
+         for (j = 0; j < (int) len_total; j++) {
             gmm.gauss[i].cov[j][j] += floor;
          }
       }
