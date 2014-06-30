@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /***************************************************************
-    $Id: _ndps2c.c,v 1.1 2014/02/27 09:45:45 artk0816 Exp $
+    $Id: _ndps2c.c,v 1.2 2014/06/30 07:27:34 artk0816 Exp $
 
     Transform Negative Derivative of Phase Spectrum (NDPS) to Cepstrum
 
@@ -74,6 +74,10 @@ void ndps2c(double *n, const int l, double *c, const int m)
    no = l / 2;
    nx = dgetmem(l);
    ny = dgetmem(l);
+
+   for (i = 0; i <= no; i++) {
+      nx[i] = n[i];
+   }
 
    for (i = 1; i < no; i++) {
       nx[l - i] = nx[i];
