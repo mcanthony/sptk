@@ -67,7 +67,7 @@
 
 /****************************************************************
 
-    $Id: swipe.c,v 1.10 2013/12/16 09:02:02 mataki Exp $
+    $Id: swipe.c,v 1.11 2014/07/07 04:45:05 uratec Exp $
 
 *****************************************************************/
 
@@ -611,7 +611,11 @@ vector swipe(int fid, double min, double max, double st, double dt) {
 #if 0
     matrix S = zerom(pc.x, ceil(((double) x.x / nyquist2) / dt)); // Strength
 #else
-    S = zerom(pc.x, ceil(((double) x.x / nyquist2) / dt)); // Strength
+    if(dt >= nyquist2){
+        S = zerom(pc.x, ceil(((double) x.x / nyquist2) / dt)); // Strength
+    }else{
+        S = zerom(pc.x, ceil((double) x.x / frame_shift)); // Strength
+    }
 #endif
     Sfirst(S, x, pc, fERBs, d, ws, ps, nyquist, nyquist2, dt, 0); 
     for (i = 1; i < ws.x - 1; i++) { // S is updated inline here
