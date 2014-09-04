@@ -60,7 +60,7 @@
 *               -M magic               : magic number                                 [N/A]  *
 *               -n N                   : order of regression polynomial               [N/A]  *
 *               -e e                   : small value added to diagonal component      [0.0]  *
-*                                        for calculating inverse matrix                      *
+*                                        for calculating regression coefficients             *
 *       infile:                                                                              *
 *              static feature sequence                                                       *
 *                      x_1(1), ..., x_1(L), x_2(1), ..., x_2(L), x_3(1), ...                 *
@@ -70,7 +70,7 @@
 *                                                                                            *
 **********************************************************************************************/
 
-static char *rcs_id = "$Id: delta.c,v 1.21 2014/06/27 04:52:51 artk0816 Exp $";
+static char *rcs_id = "$Id: delta.c,v 1.22 2014/09/04 02:50:54 artk0816 Exp $";
 
 
 /*  Standard C Libraries  */
@@ -175,7 +175,7 @@ void usage(int status)
    fprintf(stderr,
            "                                    diagonal component for  \n");
    fprintf(stderr,
-           "                                    calculating inverse matrix \n");
+           "                                    calculating regression coefficients \n");
    fprintf(stderr, "       -h                         : print this message\n");
    fprintf(stderr, "  infile:\n");
    fprintf(stderr,
