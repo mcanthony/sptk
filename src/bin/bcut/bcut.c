@@ -69,13 +69,13 @@
 *               data sequence                                   [stdin] *
 *       stdout:                                                         *
 *               cut data sequence                                       *
-*       note:                                                           *
+*       notice:                                                         *
 *               When both -l and -n are specified,                      *
 *               latter argument is adopted.                             *
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: bcut.c,v 1.30 2013/12/16 09:01:54 mataki Exp $";
+static char *rcs_id = "$Id: bcut.c,v 1.31 2014/12/03 08:49:47 shikano Exp $";
 
 
 /*  Standard C Libraries  */
@@ -153,7 +153,7 @@ void usage(int status)
    fprintf(stderr, "       data sequence        [stdin]\n");
    fprintf(stderr, "  stdout:\n");
    fprintf(stderr, "       cut data sequence\n");
-   fprintf(stderr, "  note:\n");
+   fprintf(stderr, "  notice:\n");
    fprintf(stderr, "       When both -l and -n are specified,\n");
    fprintf(stderr, "       latter argument is adopted.\n");
 #ifdef PACKAGE_VERSION

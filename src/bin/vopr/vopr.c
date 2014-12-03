@@ -77,7 +77,7 @@
 *                                                                         *
 ***************************************************************************/
 
-static char *rcs_id = "$Id: vopr.c,v 1.26 2013/12/16 09:02:05 mataki Exp $";
+static char *rcs_id = "$Id: vopr.c,v 1.27 2014/12/03 08:49:48 shikano Exp $";
 
 
 /*  Standard C Libraries  */
@@ -168,7 +168,7 @@ void usage(int status)
    fprintf(stderr, "       data vectors (%s)\n", FORMAT);
    fprintf(stderr, "  stdout:\n");
    fprintf(stderr, "       data vectors after operations (float)\n");
-   fprintf(stderr, "  note:\n");
+   fprintf(stderr, "  notice:\n");
    fprintf(stderr, "       When both -l and -n are specified,\n");
    fprintf(stderr, "       latter argument is adopted.\n");
    fprintf(stderr, "\n");

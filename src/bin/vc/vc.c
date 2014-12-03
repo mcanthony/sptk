@@ -67,13 +67,13 @@
 *            GMM trained from joint features of source and target             *
 *    stdout:                                                                  *
 *            sequence of converted static feature vectors                     *
-*    note:                                                                    *
+*    notice:                                                                  *
 *            When using -d option to specify filename of delta coefficients,  *
 *            the number of coefficients must be odd.                          *
 *                                                                             *
 *******************************************************************************/
 
-static char *rcs_id = "$Id: vc.c,v 1.7 2014/06/30 07:00:59 artk0816 Exp $";
+static char *rcs_id = "$Id: vc.c,v 1.8 2014/12/03 08:49:48 shikano Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -200,7 +200,7 @@ void usage(int status)
    fprintf(stderr,
            "       sequence of converted target static feature vectors (%s)\n",
            FORMAT);
-   fprintf(stderr, "  note:\n");
+   fprintf(stderr, "  notice:\n");
    fprintf(stderr,
            "       When using -d option to specify filename of delta coefficients, \n");
    fprintf(stderr, "       the number of coefficients must be odd. \n");

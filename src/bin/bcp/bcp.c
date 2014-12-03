@@ -73,13 +73,13 @@
 *               data sequence                                   [stdin] *
 *       stdout:                                                         *
 *               copied data sequence                                    *
-*       note:                                                           *
+*       notice:                                                         *
 *               When both (-L and -N) or (-l and -n) are specified,     *
 *               latter argument is adopted.                             *
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: bcp.c,v 1.28 2013/12/16 09:01:53 mataki Exp $";
+static char *rcs_id = "$Id: bcp.c,v 1.29 2014/12/03 08:49:47 shikano Exp $";
 
 
 /*  Standard C Libraries  */
@@ -177,7 +177,7 @@ void usage(int status)
            "       data sequence                                  [stdin]\n");
    fprintf(stderr, "  stdout:\n");
    fprintf(stderr, "       copied data sequence\n");
-   fprintf(stderr, "  note:\n");
+   fprintf(stderr, "  notice:\n");
    fprintf(stderr,
            "       When both (-L and -N) or (-l and -n) are specified,\n");
    fprintf(stderr, "       latter argument is adopted.\n");

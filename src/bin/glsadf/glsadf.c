@@ -69,14 +69,14 @@
 *        stdout:                                                        *
 *               filtered sequence                                       *
 *                   , y(0), y(1), ...,                                  *
-*        note:                                                          *
+*        notice:                                                        *
 *               if c==0, LMA filter is used, P should be 4 or 5         *
 *        require:                                                       *
 *               glsadf(), lmadf(), iglsadf(), glsadft(), iglsadft()     *
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: glsadf.c,v 1.35 2013/12/16 09:01:57 mataki Exp $";
+static char *rcs_id = "$Id: glsadf.c,v 1.36 2014/12/03 08:49:47 shikano Exp $";
 
 
 /*  Standard C Libraries  */

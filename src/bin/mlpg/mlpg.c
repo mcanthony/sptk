@@ -72,7 +72,7 @@
 *                                                                                       *
 ****************************************************************************************/
 
-static char *rcs_id = "$Id: mlpg.c,v 1.34 2013/12/16 09:02:01 mataki Exp $";
+static char *rcs_id = "$Id: mlpg.c,v 1.35 2014/12/03 08:49:47 shikano Exp $";
 
 
 /* Standard C Libraries */
@@ -212,7 +212,7 @@ void usage(int status)
            "       PDF sequence                                                     [stdin]\n");
    fprintf(stderr, "  stdout:\n");
    fprintf(stderr, "       parameter sequence\n");
-   fprintf(stderr, "  note:\n");
+   fprintf(stderr, "  notice:\n");
    fprintf(stderr,
            "       1) Option '-d' may be repeated to use multiple delta parameters.\n");
    fprintf(stderr,
