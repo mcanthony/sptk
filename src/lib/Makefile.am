@@ -1,7 +1,7 @@
 
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.18 2014/03/26 13:35:08 uratec Exp $
+## $Id: Makefile.am,v 1.19 2014/12/03 02:48:37 artk0816 Exp $
 AM_CPPFLAGS = -I$(top_srcdir)/include
 lib_LIBRARIES = libSPTK.a
 libSPTK_a_SOURCES = agexp.c \
@@ -88,6 +88,8 @@ nodist_libSPTK_a_SOURCES = $(top_srcdir)/include/SPTK.h \
 		$(top_srcdir)/bin/ulaw/_ulaw.c \
 		$(top_srcdir)/bin/vc/_vc.c \
 		$(top_srcdir)/bin/vq/_vq.c \
+		$(top_srcdir)/bin/wavjoin/_wavjoin.c \
+		$(top_srcdir)/bin/wavsplit/_wavsplit.c \
 		$(top_srcdir)/bin/window/_window.c \
 		$(top_srcdir)/bin/zcross/_zcross.c \
 		$(top_srcdir)/bin/zerodf/_zerodf.c

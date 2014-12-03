@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 ##
-## $Id: Makefile.am,v 1.25 2014/04/24 04:35:26 artk0816 Exp $
+## $Id: Makefile.am,v 1.26 2014/12/03 02:49:06 artk0816 Exp $
 
 SUBDIRS = acep \
 	acorr \
@@ -115,6 +115,8 @@ SUBDIRS = acep \
 	vq \
 	vstat \
 	vsum \
+	wavjoin \
+	wavsplit \
 	window \
 	x2x \
 	xgr \
