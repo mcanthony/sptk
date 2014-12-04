@@ -83,7 +83,7 @@
 ************************************************************************/
 
 static char *rcs_id =
-    "$Id: mlsacheck.c,v 1.16 2014/05/14 07:44:49 artk0816 Exp $";
+    "$Id: mlsacheck.c,v 1.17 2014/12/04 12:09:08 uratec Exp $";
 
 
 /*  Standard C Libraries  */
@@ -188,7 +188,7 @@ void mlsacheck(double *mcep, int m, int fftlen, int frame,
                double a, double r, int c)
 {
    int i;
-   double gain, *x, *y, *mag, max = 0.0;
+   double gain, *x, *y, *mag = NULL, max = 0.0;
 
    x = dgetmem(fftlen);
    y = dgetmem(fftlen);
