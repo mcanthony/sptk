@@ -1,7 +1,3 @@
-## Process this file with automake to produce Makefile.in
-##
-## $Id: Makefile.am,v 1.13 2014/03/26 13:35:08 uratec Exp $
-
 bin_SCRIPTS = bell gseries glogsp grlogsp gwave mgc2mgclsp mgclsp2mgc raw2wav wav2raw
 EXTRA_DIST = bell.in gseries.in glogsp.in grlogsp.in gwave.in mgc2mgclsp.in mgclsp2mgc.in raw2wav.in wav2raw.in
 

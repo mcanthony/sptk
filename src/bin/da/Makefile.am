@@ -1,11 +1,8 @@
-## Process this file with automake to produce Makefile.in
-##
-## $Id: Makefile.am,v 1.12 2014/03/26 13:35:08 uratec Exp $
 if USEDA
-AM_CPPFLAGS = -I$(top_srcdir)/include
+AM_CPPFLAGS = -I @top_srcdir@/include
 bin_PROGRAMS = dawrite
 dawrite_SOURCES = da.h dawrite.c winplay.c winplay.h
-dawrite_LDADD = $(top_builddir)/lib/libSPTK.a
+dawrite_LDADD = @top_builddir@/lib/libSPTK.a
 
 bin_SCRIPTS = da
 EXTRA_DIST = da.in

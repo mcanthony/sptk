@@ -1,6 +1,3 @@
-## Process this file with automake to produce Makefile.in
-##
-## $Id: Makefile.am,v 1.3 2008/11/12 10:49:01 s_sako Exp $
 SUBDIRS = include lib bin script
 
 # Header files to be included in the distribution.

@@ -1,7 +1,3 @@
-## Process this file with automake to produce Makefile.in
-##
-## $Id: Makefile.am,v 1.26 2014/12/03 02:49:06 artk0816 Exp $
-
 SUBDIRS = acep \
 	acorr \
 	agcep \
