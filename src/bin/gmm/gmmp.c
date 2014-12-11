@@ -62,7 +62,7 @@
  *                                                                       *
  ************************************************************************/
 
-static char *rcs_id = "$Id: gmmp.c,v 1.16 2013/12/16 09:01:57 mataki Exp $";
+static char *rcs_id = "$Id: gmmp.c,v 1.17 2014/12/11 02:22:38 artk0816 Exp $";
 
 /*  Standard C Libraries  */
 #include <stdio.h>
@@ -184,6 +184,8 @@ int main(int argc, char **argv)
 
    alloc_GMM(&gmm, M, L, full);
    load_GMM(&gmm, fgmm);
+   prepareCovInv_GMM(&gmm);
+   prepareGconst_GMM(&gmm);
 
    fclose(fgmm);
 

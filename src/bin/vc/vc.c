@@ -73,7 +73,7 @@
 *                                                                             *
 *******************************************************************************/
 
-static char *rcs_id = "$Id: vc.c,v 1.8 2014/12/03 08:49:48 shikano Exp $";
+static char *rcs_id = "$Id: vc.c,v 1.9 2014/12/11 02:20:44 artk0816 Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -371,6 +371,8 @@ int main(int argc, char **argv)
    /* load GMM parameters */
    alloc_GMM(&gmm, num_mix, len_total, full);
    load_GMM(&gmm, fgmm);
+   prepareCovInv_GMM(&gmm);
+   prepareGconst_GMM(&gmm);
    fclose(fgmm);
 
    /* flooring for diagonal component of covariance */
