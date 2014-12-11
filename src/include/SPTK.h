@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /***********************************************************
-   $Id: SPTK.h,v 1.57 2014/12/03 02:48:11 artk0816 Exp $ 
+   $Id: SPTK.h,v 1.58 2014/12/11 02:15:59 artk0816 Exp $ 
    
    Speech Signal Processing Toolkit
    SPTK.h
@@ -246,6 +246,10 @@ int alloc_GMM(GMM * gmm, const int M, const int L, const Boolean full);
 int load_GMM(GMM * gmm, FILE * fp);
 int save_GMM(const GMM * gmm, FILE * fp);
 int free_GMM(GMM * gmm);
+int prepareCovInv_GMM(GMM *gmm);
+int prepareGconst_GMM(GMM *gmm);
+int floorWeight_GMM(GMM *gmm, double floor);
+int floorVar_GMM(GMM *gmm, double floor);
 void gnorm(double *c1, double *c2, int m, const double g);
 void grpdelay(double *x, double *gd, const int size, const int is_arma);
 int histogram(double *x, const int size, const double min, const double max,
