@@ -72,7 +72,8 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: lsp2lpc.c,v 1.33 2014/04/24 02:10:48 artk0816 Exp $";
+static char *rcs_id =
+    "$Id: lsp2lpc.c,v 1.34 2014/12/11 07:33:12 uratec Exp $";
 
 
 /*  Standard C Libraries  */
@@ -182,7 +183,7 @@ int main(int argc, char **argv)
             loggain = TR;
             break;
          case 'i':
-	 case 'q':
+         case 'q':
             itype = atoi(*++argv);
             --argc;
             break;

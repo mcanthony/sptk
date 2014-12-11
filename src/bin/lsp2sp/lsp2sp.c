@@ -77,7 +77,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: lsp2sp.c,v 1.4 2014/04/24 02:11:16 artk0816 Exp $";
+static char *rcs_id = "$Id: lsp2sp.c,v 1.5 2014/12/11 07:33:12 uratec Exp $";
 
 
 /*  Standard C Libraries  */
@@ -184,7 +184,7 @@ int main(int argc, char **argv)
          case 's':
          case 'l':
          case 'i':
-	 case 'q':
+         case 'q':
          case 'o':
             if (isdigit(**(argv + 1)) == 0) {
                if ((**(argv + 1)) != '+') {

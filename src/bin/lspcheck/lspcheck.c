@@ -79,7 +79,8 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id = "$Id: lspcheck.c,v 1.38 2014/04/24 02:11:43 artk0816 Exp $";
+static char *rcs_id =
+    "$Id: lspcheck.c,v 1.39 2014/12/11 07:33:12 uratec Exp $";
 
 
 /*  Standard C Libraries  */
@@ -210,7 +211,7 @@ int main(int argc, char **argv)
             --argc;
             break;
          case 'i':
-	 case 'q':
+         case 'q':
             itype = atoi(*++argv);
             --argc;
             break;
