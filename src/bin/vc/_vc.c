@@ -8,7 +8,7 @@
 /*                           Interdisciplinary Graduate School of    */
 /*                           Science and Engineering                 */
 /*                                                                   */
-/*                1996-2013  Nagoya Institute of Technology          */
+/*                1996-2014  Nagoya Institute of Technology          */
 /*                           Department of Computer Science          */
 /*                                                                   */
 /* All rights reserved.                                              */
@@ -44,7 +44,7 @@
 
 /*********************************************************************
 *                                                                    *
-*    $Id: _vc.c,v 1.5 2014/06/10 01:46:47 artk0816 Exp $               *
+*    $Id: _vc.c,v 1.6 2014/12/11 08:30:51 uratec Exp $               *
 *                                                                    *
 *    module for vc command                                           *
 *                                                                    *
