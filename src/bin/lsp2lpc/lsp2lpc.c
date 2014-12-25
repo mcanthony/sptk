@@ -72,8 +72,7 @@
 *                                                                       *
 ************************************************************************/
 
-static char *rcs_id =
-    "$Id: lsp2lpc.c,v 1.35 2014/12/11 08:30:40 uratec Exp $";
+static char *rcs_id = "$Id: lsp2lpc.c,v 1.36 2014/12/25 02:41:38 uratec Exp $";
 
 
 /*  Standard C Libraries  */
