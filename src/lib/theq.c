@@ -44,7 +44,7 @@
 
 /******************************************************************
 
-    $Id: theq.c,v 1.20 2014/12/11 08:30:53 uratec Exp $
+    $Id: theq.c,v 1.21 2014/12/30 06:29:49 uratec Exp $
 
     Subroutine for Solving a Toeplitz plus Hankel
     Coefficient Matrix System of Equations  ( T + H ) a = b
@@ -298,7 +298,7 @@ int theq(double *t, double *h, double *a, double *b, const int n, double eps)
       size = n;
    }
    if (n > size) {
-      for (i = 0; i < n; i++) {
+      for (i = 0; i < size; i++) {
          free((char *) r[i]);
          free((char *) x[i]);
          free((char *) xx[i]);
