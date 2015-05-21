@@ -44,7 +44,7 @@
 
 /************************************************************************
 *                                                                       *
-*      $Id: _root_pol.c,v 1.17 2014/12/11 08:30:49 uratec Exp $        *
+*      $Id: _root_pol.c,v 1.18 2015/05/21 08:30:25 uratec Exp $        *
 *                                                                       *
 *      Durand-Kerner-Aberth for Higher Order Equation                   *
 *                                                                       *
@@ -75,9 +75,9 @@
 #include <math.h>
 
 #if defined(WIN32)
-#  include "SPTK.h"
+#include "SPTK.h"
 #else
-#  include <SPTK.h>
+#include <SPTK.h>
 #endif
 
 typedef enum { plus, minus, multiply, divide } opt;
@@ -197,7 +197,7 @@ void root_pol(double *a, const int odr, complex * x, const int a_zero,
    double th, th1, th2, cm, cmax;
    complex cden, cnum, c1, *deltx;
 
-   deltx = cplx_getmem(odr);
+   deltx = cplx_getmem(odr + 1);
 
    if (!a_zero)
       for (i = 1; i <= odr; i++)
