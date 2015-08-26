@@ -44,7 +44,7 @@
 
 /*********************************************************************
 *                                                                    *
-*    $Id: _vc.c,v 1.6 2014/12/11 08:30:51 uratec Exp $               *
+*    $Id: _vc.c,v 1.7 2015/08/26 02:16:39 uratec Exp $               *
 *                                                                    *
 *    module for vc command                                           *
 *                                                                    *
@@ -55,9 +55,9 @@
 #include <math.h>
 
 #if defined(WIN32)
-#  include "SPTK.h"
+#include "SPTK.h"
 #else
-#  include <SPTK.h>
+#include <SPTK.h>
 #endif
 
 #include "hts_engine_API/HTS_engine.h"
