@@ -56,7 +56,7 @@
 
 set path    = ( @bindir@ $path )
 set sptkver = '@package_version@'
-set cvsid   = '$Id: glogsp.in,v 1.22 2014/12/11 08:30:53 uratec Exp $'
+set cvsid   = '$Id: glogsp.in,v 1.23 2015/10/26 07:41:43 fjst15124 Exp $'
 
 set cmnd = $0
 set cmnd = $cmnd:t
@@ -254,8 +254,9 @@ end
 
 # when input stream is stdin
 if ("$file" == "") then
-    cat > /tmp/glogsp
-    set file=/tmp/glogsp
+    rm -fr /tmp/sptk-glogsp-$uid-$$
+    cat > /tmp/sptk-glogsp-$uid-$$
+    set file=/tmp/sptk-glogsp-$uid-$$
 endif
 
 goto main
@@ -383,7 +384,4 @@ if ($?f) then
         fig $f -W $w -H $h -o $xo $yo -g 0 -F $F
 endif
 
-# when input stream is stdin
-if ("$file" == "") then
-    /bin/rm -f /tmp/glogsp
-endif
+rm -fr /tmp/sptk-glogsp-$uid-$$

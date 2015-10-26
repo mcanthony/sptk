@@ -55,7 +55,7 @@ onintr clean
 
 set path    = ( @bindir@ $path )
 set sptkver = '@package_version@'
-set cvsid   = '$Id: gseries.in,v 1.7 2014/12/11 08:30:53 uratec Exp $'
+set cvsid   = '$Id: gseries.in,v 1.8 2015/10/26 07:41:43 fjst15124 Exp $'
 
 set cmnd = $0
 set cmnd = $cmnd:t
@@ -209,8 +209,9 @@ endif
 
 # when input stream is stdin
 if ("$file" == "") then
-    cat > /tmp/gseries
-    set file=/tmp/gseries
+    rm -fr /tmp/sptk-gseries-$uid-$$
+    cat > /tmp/sptk-gseries-$uid-$$
+    set file=/tmp/sptk-gseries-$uid-$$
 endif
 
 if ( ($start != 0) || ($term > 0) ) then
@@ -251,10 +252,7 @@ else
     endif
 endif
 
-# when input stream is stdin
-if ("$file" == "") then
-    /bin/rm -f /tmp/gseries
-endif
+rm -fr /tmp/sptk-gseries-$uid-$$
 
 set file = /tmp/$$
 

@@ -53,7 +53,7 @@
 
 set path    = ( @bindir@ $path )
 set sptkver = '@package_version@'
-set cvsid   = '$Id: mgclsp2mgc.in,v 1.9 2014/12/11 08:30:53 uratec Exp $'
+set cvsid   = '$Id: mgclsp2mgc.in,v 1.10 2015/10/26 07:41:43 fjst15124 Exp $'
 
 set cmnd = $0
 set cmnd = $cmnd:t
@@ -117,8 +117,9 @@ end
 
 # when input stream is stdin
 if ("$file" == "") then
-    cat > /tmp/mgclsp2mgc
-    set file=/tmp/mgclsp2mgc
+    rm -fr /tmp/sptk-mgclsp2mgc-$uid-$$
+    cat > /tmp/sptk-mgclsp2mgc-$uid-$$
+    set file=/tmp/sptk-mgclsp2mgc-$uid-$$
 endif
 
 goto main
@@ -162,7 +163,4 @@ else
         mgc2mgc -m $m -M $m -a $a -A $a -g $g -G $g -n -u
 endif
 
-# when input stream is stdin
-if ("$file" == "") then
-    /bin/rm -f /tmp/mgclsp2mgc
-endif
+rm -fr /tmp/sptk-mgclsp2mgc-$uid-$$

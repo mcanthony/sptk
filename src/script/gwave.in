@@ -56,7 +56,7 @@ onintr clean
 
 set path    = ( @bindir@ $path )
 set sptkver = '@package_version@'
-set cvsid   = '$Id: gwave.in,v 1.22 2014/12/11 08:30:53 uratec Exp $'
+set cvsid   = '$Id: gwave.in,v 1.23 2015/10/26 07:41:43 fjst15124 Exp $'
 
 set cmnd = $0
 set cmnd = $cmnd:t
@@ -177,12 +177,12 @@ while ($i < $#argv)
         endsw
 end
 
+# when input stream is stdin
 if ("$file" == "") then
-    cat $file > /tmp/$$
-else
-    cat "$file" > /tmp/$$
+    rm -fr /tmp/sptk-gwave-$uid-$$
+    cat > /tmp/sptk-gwave-$uid-$$
+    set file=/tmp/sptk-gwave-$uid-$$
 endif
-set file = /tmp/$$
 
 goto main
 
@@ -308,5 +308,5 @@ EOF
 
 end
 clean:
-/bin/rm -f /tmp/$$
 
+rm -fr /tmp/sptk-gwave-$uid-$$

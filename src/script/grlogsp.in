@@ -57,7 +57,7 @@
 
 set path    = ( @bindir@ $path )
 set sptkver = '@package_version@'
-set cvsid   = '$Id: grlogsp.in,v 1.22 2014/12/11 08:30:53 uratec Exp $'
+set cvsid   = '$Id: grlogsp.in,v 1.23 2015/10/26 07:41:43 fjst15124 Exp $'
 
 set cmnd = $0
 set cmnd = $cmnd:t
@@ -302,8 +302,9 @@ end
 
 # when input stream is stdin
 if ("$file" == "") then
-    cat > /tmp/grlogsp
-    set file=/tmp/grlogsp
+    rm -fr /tmp/sptk-grlogsp-$uid-$$
+    cat > /tmp/sptk-grlogsp-$uid-$$
+    set file=/tmp/sptk-grlogsp-$uid-$$
 endif
 
 goto main
@@ -485,7 +486,4 @@ if ($trans) set T = "-t -1"
 bcut +f -s $s $ee "$file" |\
 fdrw $T -W $ww -o $xo $yo -g 0 -y $yy -n $lhi -p $p -m $ln -z $z -F $F
 
-# when input stream is stdin
-if ("$file" == "") then
-    /bin/rm -f /tmp/grlogsp
-endif
+rm -fr /tmp/sptk-grlogsp-$uid-$$
