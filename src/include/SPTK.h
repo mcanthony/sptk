@@ -43,7 +43,7 @@
 /* ----------------------------------------------------------------- */
 
 /***********************************************************
-   $Id: SPTK.h,v 1.60 2014/12/11 08:30:52 uratec Exp $ 
+   $Id: SPTK.h,v 1.61 2015/11/08 08:29:13 shikano Exp $ 
    
    Speech Signal Processing Toolkit
    SPTK.h
@@ -300,6 +300,8 @@ void mfcc(double *in, double *mc, const double sampleFreq, const double alpha,
           const double eps, const int wlng, const int flng, const int m,
           const int n, const int ceplift, const Boolean dftmode,
           const Boolean usehamming);
+void maskCov_GMM(GMM * gmm, const int *dim_list, const int cov_dim, 
+		 const Boolean block_full, const Boolean block_corr);
 void frqtr(double *c1, int m1, double *c2, int m2, const double a);
 void mgc2mgc(double *c1, const int m1, const double a1, const double g1,
              double *c2, const int m2, const double a2, const double g2);
